@@ -106,11 +106,9 @@
       </div>
       <nav class="nav-menu" id="navMenu" aria-label="Main">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="venues.html" class="nav-link">Venues</a>
         <a href="decor.html" class="nav-link">Decor</a>
         <a href="floorplan.html" class="nav-link">Floor Plans</a>
         <a href="catering.html" class="nav-link">Catering</a>
-        <a href="calendar.html" class="nav-link active" aria-current="page">Dates</a>
         <a href="calculator.html" class="nav-link">Cost Quote</a>
         <a href="location.html" class="nav-link">Location</a>
         <a href="contact.html" class="nav-link">Contact</a>
@@ -368,11 +366,11 @@
           </div>
         </div>
 
-        <!-- RIGHT COLUMN: Pop-up Info, Hall & Services Selection, WhatsApp Booking -->
+        <!-- RIGHT COLUMN: Minimalist Info, Availability & Price Estimation -->
         <div class="cal-right-pane" id="calInfoPanel">
           <div class="cal-info-card">
 
-            <!-- Date & Muhurtham Lagna Header -->
+            <!-- Selected Date & Title -->
             <div class="cal-info-header">
               <div class="cal-info-top-row">
                 <div class="cal-info-date-badge">
@@ -380,283 +378,63 @@
                   <span class="cal-info-date-month" id="selectedDateMonth">NOV</span>
                 </div>
                 <div class="cal-info-heading-wrap">
-                  <div class="cal-info-status-badge" id="selectedDateTypeBadge">✨ Auspicious Muhurtham</div>
                   <h3 class="cal-info-full-date" id="selectedDateFull">Wednesday, 4 November 2026</h3>
                   <div class="cal-info-event-title" id="selectedDateEventTitle">Karthika Pournami Vivaha Muhurtham</div>
                 </div>
               </div>
-
-              <!-- Lagna & Timings Card -->
-              <div class="cal-lagna-card" id="selectedDateLagnaCard">
-                <div class="cal-lagna-header">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                  <strong>Auspicious Timings &amp; Lagna Windows</strong>
-                </div>
-                <p class="cal-lagna-text" id="selectedDateLagnaText">Morning Dhanur Lagna (05:45 AM – 08:15 AM) · Twilight Kumbha Lagna (06:45 PM – 09:15 PM)</p>
-                <div class="cal-lagna-footer">
-                  <span class="cal-availability-tag" id="selectedDateAvailabilityTag">⚡ Fast Filling · Limited Slots Remaining</span>
-                </div>
+              <div class="cal-status-badge-wrap" style="margin-top: 10px;">
+                <span class="cal-minimal-badge muhurtham" id="selectedDateTypeBadge">Auspicious Muhurtham &middot; High Demand</span>
               </div>
             </div>
 
-            <!-- Configuration & Selection Controls -->
-            <div class="cal-selection-container">
-              
-              <!-- 1. Hall / Venue Selection -->
-              <div class="cal-select-group">
-                <div class="cal-group-header">
-                  <span class="cal-step-badge">1</span>
-                  <div>
-                    <h4 class="cal-group-title">Choose Venue / Hall Space</h4>
-                    <p class="cal-group-subtitle">Select the hall that matches your guest scale:</p>
-                  </div>
-                </div>
+            <!-- Price Estimation Block -->
+            <div class="cal-price-estimate-box">
+              <div class="cal-price-head">
+                <span class="price-estimate-title">Price Estimation</span>
+                <span class="price-calc-badge" id="estBaseRateNote">Central AC Convention</span>
+              </div>
 
-                <div class="cal-halls-list" id="calHallsList">
-                  
-                  <label class="cal-hall-option active" data-hall-id="main-hall">
-                    <input type="radio" name="eventHall" value="Main Hall (Indoor Convention Space)" checked>
-                    <div class="cal-hall-indicator"></div>
-                    <div class="cal-hall-info">
-                      <div class="cal-hall-name-row">
-                        <span class="cal-hall-title">Main Hall (Indoor Space)</span>
-                        <span class="cal-pill-badge">Most Popular</span>
-                      </div>
-                      <p class="cal-hall-desc">Italian coffered drop ceiling, central AC, 300 to 2,500 capacity (1,500 banquet seated)</p>
-                      <span class="cal-hall-rate">Per Plate System: Veg from ₹1,200 · Non-Veg from ₹1,300</span>
-                    </div>
-                  </label>
-
-                  <label class="cal-hall-option" data-hall-id="coastal-lawn">
-                    <input type="radio" name="eventHall" value="Royal Coastal Lawn (Open-Air)">
-                    <div class="cal-hall-indicator"></div>
-                    <div class="cal-hall-info">
-                      <div class="cal-hall-name-row">
-                        <span class="cal-hall-title">Royal Coastal Lawn (Open Air)</span>
-                        <span class="cal-pill-badge">Sea Breeze</span>
-                      </div>
-                      <p class="cal-hall-desc">18,000 sq.ft. lawn under coastal stars with Rushikonda sea breeze, fairy lights &amp; live food stalls (800 - 1,500 guests)</p>
-                      <span class="cal-hall-rate">Ideal for Evening Receptions, Twilight Weddings &amp; Sangeet</span>
-                    </div>
-                  </label>
-
-                  <label class="cal-hall-option" data-hall-id="dining-pavilion">
-                    <input type="radio" name="eventHall" value="Imperial Dining Pavilion">
-                    <div class="cal-hall-indicator"></div>
-                    <div class="cal-hall-info">
-                      <div class="cal-hall-name-row">
-                        <span class="cal-hall-title">Imperial Dining Pavilion</span>
-                        <span class="cal-pill-badge">700+ Dining</span>
-                      </div>
-                      <p class="cal-hall-desc">Dedicated central AC banquet dining hall with twin parallel buffet tracks for fast VIP flow</p>
-                      <span class="cal-hall-rate">Standardly Included with Wedding Bookings</span>
-                    </div>
-                  </label>
-
-                  <label class="cal-hall-option" data-hall-id="entire-buyout">
-                    <input type="radio" name="eventHall" value="Entire Convention Center Buyout (24-Hour Exclusive)">
-                    <div class="cal-hall-indicator"></div>
-                    <div class="cal-hall-info">
-                      <div class="cal-hall-name-row">
-                        <span class="cal-hall-title">Entire Convention Center Buyout</span>
-                        <span class="cal-pill-badge royal">24-Hr VIP</span>
-                      </div>
-                      <p class="cal-hall-desc">Complete exclusive access to Main Hall + Coastal Lawn + Dining Pavilion + 4 VIP Suites</p>
-                      <span class="cal-hall-rate">Zero concurrent events · Total privacy &amp; dedicated staff</span>
-                    </div>
-                  </label>
-
+              <!-- Guest Scale Selector -->
+              <div class="cal-guest-pills-row">
+                <span class="cal-guest-label">Guest Scale:</span>
+                <div class="cal-guest-chips" id="calGuestChips">
+                  <button type="button" class="guest-chip" data-guests="300" onclick="setCalendarGuests(300)">300</button>
+                  <button type="button" class="guest-chip active" data-guests="500" onclick="setCalendarGuests(500)">500</button>
+                  <button type="button" class="guest-chip" data-guests="800" onclick="setCalendarGuests(800)">800</button>
+                  <button type="button" class="guest-chip" data-guests="1200" onclick="setCalendarGuests(1200)">1,200</button>
                 </div>
               </div>
 
-              <!-- 2. Services Selection -->
-              <div class="cal-select-group">
-                <div class="cal-group-header">
-                  <span class="cal-step-badge">2</span>
-                  <div>
-                    <h4 class="cal-group-title">Services Provided by A1 Grand</h4>
-                    <p class="cal-group-subtitle">Select the premium in-house services you want included:</p>
-                  </div>
+              <!-- Breakdown Lines -->
+              <div class="cal-price-breakdown">
+                <div class="price-row">
+                  <span>Main Hall Rental (AC):</span>
+                  <span class="price-item-val" id="estHallRent">&#8377;2,50,000</span>
                 </div>
-
-                <div class="cal-services-checklist" id="calServicesChecklist">
-                  
-                  <label class="cal-service-card is-checked">
-                    <input type="checkbox" name="eventServices" value="Royal Banqueting & Live Catering" checked>
-                    <div class="cal-checkbox-custom"></div>
-                    <div class="cal-service-details">
-                      <div class="cal-service-headline">
-                        <span class="cal-service-icon">🍽️</span>
-                        <strong>Royal Banqueting &amp; Live Feast</strong>
-                      </div>
-                      <p>Traditional Andhra wedding feast, live tandoor, chaat counters, and gourmet desserts (Per plate: Veg ₹1,200 / Non-Veg ₹1,300)</p>
-                    </div>
-                  </label>
-
-                  <label class="cal-service-card is-checked">
-                    <input type="checkbox" name="eventServices" value="Grand Mandapam & Floral Decor" checked>
-                    <div class="cal-checkbox-custom"></div>
-                    <div class="cal-service-details">
-                      <div class="cal-service-headline">
-                        <span class="cal-service-icon">🌺</span>
-                        <strong>Grand Mandapam &amp; Floral Decor</strong>
-                      </div>
-                      <p>Authentic South Indian Kalyana Mandapam, fresh jasmine and orchid canopies, entrance arch &amp; aisle styling</p>
-                    </div>
-                  </label>
-
-                  <label class="cal-service-card is-checked">
-                    <input type="checkbox" name="eventServices" value="Panoramic 4K Stage LED Screen & Lighting" checked>
-                    <div class="cal-checkbox-custom"></div>
-                    <div class="cal-service-details">
-                      <div class="cal-service-headline">
-                        <span class="cal-service-icon">📺</span>
-                        <strong>Panoramic 4K LED Screen &amp; Lights</strong>
-                      </div>
-                      <p>Ultra-HD stage backdrop LED video wall, live camera feed relay &amp; intelligent computerized stage lighting</p>
-                    </div>
-                  </label>
-
-                  <label class="cal-service-card">
-                    <input type="checkbox" name="eventServices" value="Concert Sound & Sangeet DJ System">
-                    <div class="cal-checkbox-custom"></div>
-                    <div class="cal-service-details">
-                      <div class="cal-service-headline">
-                        <span class="cal-service-icon">🎵</span>
-                        <strong>Concert Sound System &amp; DJ</strong>
-                      </div>
-                      <p>Acoustic line-array sound system, wireless UHF microphones, dance floor &amp; energetic sangeet DJ setup</p>
-                    </div>
-                  </label>
-
-                  <label class="cal-service-card is-checked">
-                    <input type="checkbox" name="eventServices" value="Luxury Bridal & Groom Dressing Suites (4 Rooms)" checked>
-                    <div class="cal-checkbox-custom"></div>
-                    <div class="cal-service-details">
-                      <div class="cal-service-headline">
-                        <span class="cal-service-icon">👰</span>
-                        <strong>VIP &amp; Bridal Dressing Suites (4 Rooms)</strong>
-                      </div>
-                      <p>Central AC suites with plush couches, theatrical vanity makeup mirrors, private powder rooms &amp; wardrobes</p>
-                    </div>
-                  </label>
-
-                  <label class="cal-service-card is-checked">
-                    <input type="checkbox" name="eventServices" value="Valet Parking & 24/7 Security Concierge" checked>
-                    <div class="cal-checkbox-custom"></div>
-                    <div class="cal-service-details">
-                      <div class="cal-service-headline">
-                        <span class="cal-service-icon">🚗</span>
-                        <strong>Valet Parking &amp; Security Concierge</strong>
-                      </div>
-                      <p>Paved parking facility for 400+ cars, uniformed valet drivers, traffic marshals &amp; 24/7 security vigilance</p>
-                    </div>
-                  </label>
-
-                  <label class="cal-service-card">
-                    <input type="checkbox" name="eventServices" value="Photography & 4K Wedding Cinematography">
-                    <div class="cal-checkbox-custom"></div>
-                    <div class="cal-service-details">
-                      <div class="cal-service-headline">
-                        <span class="cal-service-icon">📸</span>
-                        <strong>Photography &amp; 4K Cinematography</strong>
-                      </div>
-                      <p>Full wedding coverage: candid photography, 4K wedding teaser, live webcast &amp; Rushikonda beach drone shots</p>
-                    </div>
-                  </label>
-
-                  <label class="cal-service-card">
-                    <input type="checkbox" name="eventServices" value="Dedicated Muhurtham Event Coordinator">
-                    <div class="cal-checkbox-custom"></div>
-                    <div class="cal-service-details">
-                      <div class="cal-service-headline">
-                        <span class="cal-service-icon">🛎️</span>
-                        <strong>Dedicated Muhurtham Coordinator</strong>
-                      </div>
-                      <p>Senior on-site coordinator managing lagna schedule, priest requirements, vendor sync &amp; VIP reception</p>
-                    </div>
-                  </label>
-
+                <div class="price-row">
+                  <span>Live Catering (<span id="estGuestCountLabel">500</span> &times; &#8377;1,200):</span>
+                  <span class="price-item-val" id="estCateringCost">&#8377;6,00,000</span>
+                </div>
+                <div class="price-divider"></div>
+                <div class="price-total-row">
+                  <span>Estimated Total:</span>
+                  <span class="price-total-val" id="estTotalPackage">&#8377;8,50,000</span>
                 </div>
               </div>
-
-              <!-- 3. Time Slot & Guests -->
-              <div class="cal-select-group">
-                <div class="cal-group-header">
-                  <span class="cal-step-badge">3</span>
-                  <div>
-                    <h4 class="cal-group-title">Time Slot &amp; Expected Guests</h4>
-                    <p class="cal-group-subtitle">Choose your timing window and approximate attendance:</p>
-                  </div>
-                </div>
-
-                <div class="cal-slot-selector" id="calSlotSelector">
-                  <button type="button" class="cal-slot-btn active" data-slot="Morning Muhurtham (05:30 AM – 02:00 PM)">
-                    <span class="slot-icon">🌅</span>
-                    <span class="slot-label">Morning Muhurtham</span>
-                    <span class="slot-time">05:30 AM – 02:00 PM</span>
-                  </button>
-                  <button type="button" class="cal-slot-btn" data-slot="Evening Reception (04:30 PM – 11:30 PM)">
-                    <span class="slot-icon">🌙</span>
-                    <span class="slot-label">Evening Reception</span>
-                    <span class="slot-time">04:30 PM – 11:30 PM</span>
-                  </button>
-                  <button type="button" class="cal-slot-btn" data-slot="Full Day 24-Hour Exclusive Buyout">
-                    <span class="slot-icon">⏳</span>
-                    <span class="slot-label">Full Day 24-Hour</span>
-                    <span class="slot-time">Full Day Exclusive</span>
-                  </button>
-                </div>
-
-                <div class="cal-guests-selector">
-                  <span class="cal-mini-label">Expected Guest Attendance:</span>
-                  <div class="cal-guest-buttons" id="calGuestButtons">
-                    <button type="button" class="guest-btn" data-guests="300 - 500">300 - 500</button>
-                    <button type="button" class="guest-btn active" data-guests="500 - 1,000">500 - 1,000</button>
-                    <button type="button" class="guest-btn" data-guests="1,000 - 1,500">1,000 - 1,500</button>
-                    <button type="button" class="guest-btn" data-guests="1,500 - 2,500">1,500 - 2,500</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Live Configuration Summary Strip -->
-              <div class="cal-live-summary">
-                <div class="summary-chip">
-                  <span class="chip-k">Date</span>
-                  <span class="chip-v" id="liveDateVal">4 Nov 2026</span>
-                </div>
-                <div class="summary-chip">
-                  <span class="chip-k">Hall</span>
-                  <span class="chip-v" id="liveHallVal">Main Hall</span>
-                </div>
-                <div class="summary-chip">
-                  <span class="chip-k">Services</span>
-                  <span class="chip-v" id="liveServicesCount">5 Included</span>
-                </div>
-                <div class="summary-chip">
-                  <span class="chip-k">Slot</span>
-                  <span class="chip-v" id="liveSlotVal">Morning</span>
-                </div>
-              </div>
-
-              <!-- BOOK NOW ON WHATSAPP ACTION -->
-              <div class="cal-whatsapp-action-block">
-                <button type="button" class="btn-whatsapp-book" id="btnWhatsAppBook" onclick="bookMuhurthamOnWhatsApp()">
-                  <svg class="wa-btn-icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                  </svg>
-                  <span>Book Now via WhatsApp &rarr;</span>
-                </button>
-                <div class="cal-action-guarantee">
-                  <span>⚡ Instant response from A1 Grand Venue Director (+91 98481 23456)</span>
-                  <span>🔒 Direct priority hold for your selected Muhurtham date</span>
-                </div>
-              </div>
-
+              <p class="cal-price-disclaimer">*Estimated cost for AC Convention Hall, dining pavilion, and standard amenities.</p>
             </div>
+
+            <!-- Minimalist Action CTA -->
+            <div class="cal-action-box">
+              <a href="https://api.whatsapp.com/send?phone=919848123456&text=Hello%20A1%20Grand%2C%20I%20would%20like%20to%20check%20availability%20and%20reserve%20for%204%20November%202026%20(Estimated%20500%20Guests)." 
+                 target="_blank" rel="noopener noreferrer" class="btn-whatsapp-minimal" id="calWhatsAppBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>Reserve Date via WhatsApp</span>
+              </a>
+            </div>
+
           </div>
         </div>
-
       </div>
     </div>
   </section>

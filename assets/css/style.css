@@ -4674,11 +4674,55 @@ body { background: #ffffff; color: var(--text-main); }
 /* ---------- Page banner & transitions ---------- */
 main { animation: pageIn .5s ease both; }
 @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
-/* ---------- Page banner & transitions ---------- */
-main { animation: pageIn .5s ease both; }
-@keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
-.page-banner { position: relative; height: clamp(65px, 9vw, 105px); background-position: center; background-size: cover; background-repeat: no-repeat; }
-.page-banner-fade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,255,255,0) 40%, #fff 100%); }
+
+.page-banner {
+  position: relative;
+  width: 100%;
+  height: clamp(380px, 42vw, 520px);
+  background-position: center 35%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.page-banner-fade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 78%,
+    rgba(255, 255, 255, 0.05) 82%,
+    rgba(255, 255, 255, 0.18) 86%,
+    rgba(255, 255, 255, 0.40) 90%,
+    rgba(255, 255, 255, 0.70) 94%,
+    rgba(255, 255, 255, 0.92) 98%,
+    #ffffff 100%
+  );
+}
+
+.page-banner + section,
+.page-banner + main > section:first-child,
+.page-banner + * {
+  border-top: none !important;
+}
+
+@media (max-width: 991px) {
+  .page-banner {
+    height: clamp(300px, 45vw, 400px);
+    background-position: center center;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-banner {
+    height: clamp(250px, 55vw, 320px);
+    background-position: center center;
+  }
+}
+
 
 /* ---------- Home: explore grid ---------- */
 .explore-section { padding: 34px 0; background: var(--bg-secondary); }
@@ -4977,10 +5021,6 @@ section,
   font-size: 0.68rem !important;
 }
 
-/* Compact Page Banner on Subpages */
-.page-banner {
-  height: clamp(48px, 6vw, 75px) !important;
-}
 
 /* Compact Venues Page Layout */
 .space-tabs-wrapper {
@@ -5731,7 +5771,7 @@ textarea.form-control {
   gap: 22px;
   width: max-content;
   will-change: transform;
-  animation: flowSlideLeftToRight 45s linear infinite;
+  animation: flowSlideLeftToRight 65s linear infinite;
 }
 
 /* Moving positive X from -50% to 0% creates continuous Left-to-Right flow */
@@ -5889,5 +5929,616 @@ textarea.form-control {
   }
   .home-gallery-section {
     padding: 30px 0 40px;
+  }
+}
+
+/* Sleek Raw Photo Items (No Text, No Badges, Pure Authentic Visuals) */
+.home-raw-photo {
+  flex: 0 0 auto;
+  height: 270px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  background: #08111e;
+  border: 1px solid rgba(14, 26, 46, 0.12);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-raw-photo:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 16px 36px rgba(14, 26, 46, 0.28);
+  border-color: rgba(212, 175, 55, 0.85);
+}
+
+.home-raw-photo img {
+  height: 100%;
+  width: auto;
+  max-width: 440px;
+  min-width: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .home-raw-photo {
+    height: 195px;
+  }
+  .home-raw-photo img {
+    min-width: 200px;
+    max-width: 310px;
+  }
+}
+
+
+/* ==========================================================================
+   INVERTED THEME: White Background / Filling + Black / Dark Font Colors
+   Left-Aligned Calendar Grid + Right-Side Minimal Price Estimation (No Emojis)
+   ========================================================================== */
+
+.home-calendar-section,
+.calendar-section {
+  padding: 50px 0 65px;
+  background: #f8fafc !important;
+  position: relative;
+}
+
+.home-calendar-header-left {
+  text-align: left !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start !important;
+  max-width: 720px;
+  margin-bottom: 24px;
+}
+
+.home-calendar-header-left .section-label,
+.calendar-section .section-label {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #b45309 !important;
+  margin-bottom: 6px;
+  text-align: left !important;
+}
+
+.home-calendar-header-left .section-title,
+.calendar-section .section-title {
+  font-family: var(--font-display, 'Cinzel', serif);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  color: #0f172a !important;
+  line-height: 1.15;
+  margin: 0 0 8px 0;
+  text-align: left !important;
+}
+
+.home-calendar-header-left .section-subtitle,
+.calendar-section .section-subtitle {
+  font-size: 0.90rem;
+  color: #475569 !important;
+  line-height: 1.55;
+  margin: 0;
+  text-align: left !important;
+}
+
+/* Left Pane Wrapper - Crisp White Luxury Card */
+.cal-card-wrapper {
+  background: #ffffff !important;
+  border: 1px solid rgba(14, 26, 46, 0.12) !important;
+  border-radius: 16px !important;
+  padding: 24px !important;
+  box-shadow: 0 10px 30px rgba(14, 26, 46, 0.08) !important;
+  backdrop-filter: none !important;
+}
+
+.cal-header-bar {
+  border-bottom: 1px solid rgba(14, 26, 46, 0.08) !important;
+}
+
+.cal-current-month {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+.cal-nav-btn {
+  background: #f1f5f9 !important;
+  border: 1px solid rgba(14, 26, 46, 0.14) !important;
+  color: #0f172a !important;
+}
+
+.cal-nav-btn:hover {
+  background: rgba(212, 175, 55, 0.15) !important;
+  border-color: #d4af37 !important;
+  color: #b45309 !important;
+}
+
+.legend-item {
+  color: #475569 !important;
+}
+
+.cal-month-pill {
+  background: #f1f5f9 !important;
+  border: 1px solid rgba(14, 26, 46, 0.12) !important;
+  color: #334155 !important;
+}
+
+.cal-month-pill:hover {
+  background: #e2e8f0 !important;
+  border-color: rgba(212, 175, 55, 0.4) !important;
+  color: #0f172a !important;
+}
+
+.cal-month-pill.active {
+  background: #d4af37 !important;
+  color: #040609 !important;
+  border-color: #d4af37 !important;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3) !important;
+}
+
+.cal-days-head .cal-day-name {
+  color: #64748b !important;
+  font-weight: 700 !important;
+}
+
+/* Calendar Date Cells: White/Light Filling with Black/Dark Date Numbers */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.cal-date-cell {
+  background: #ffffff !important;
+  border: 1px solid rgba(14, 26, 46, 0.12) !important;
+  border-radius: 9px !important;
+  height: 58px !important;
+  min-height: 58px !important;
+  padding: 6px 4px 4px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  position: relative !important;
+  box-shadow: 0 2px 6px rgba(14, 26, 46, 0.05) !important;
+  box-sizing: border-box !important;
+}
+
+.cal-date-cell:hover {
+  border-color: rgba(212, 175, 55, 0.8) !important;
+  background: #f8fafc !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(14, 26, 46, 0.12) !important;
+}
+
+.cal-date-cell .cal-num {
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+  line-height: 1 !important;
+  display: block !important;
+  text-align: center !important;
+  margin: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  letter-spacing: -0.01em !important;
+}
+
+/* Muhurtham Auspicious Cell */
+.cal-date-cell.muhurtham {
+  border: 1.5px solid #d4af37 !important;
+  background: #fffdf5 !important;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.18) !important;
+}
+
+.cal-date-cell.muhurtham .cal-num {
+  color: #92400e !important;
+}
+
+/* Prime Weekend Cell */
+.cal-date-cell.available {
+  border: 1.5px solid #38bdf8 !important;
+  background: #f0f9ff !important;
+}
+
+.cal-date-cell.available .cal-num {
+  color: #0369a1 !important;
+}
+
+/* Fast Filling Cell */
+.cal-date-cell.filling {
+  border: 1.5px solid #f59e0b !important;
+  background: #fffbeb !important;
+}
+
+.cal-date-cell.filling .cal-num {
+  color: #b45309 !important;
+}
+
+/* Selected Cell with Gold Highlight & Black/Dark Text */
+.cal-date-cell.selected {
+  border: 2px solid #b45309 !important;
+  background: #d4af37 !important;
+  box-shadow: 0 0 16px rgba(212, 175, 55, 0.5) !important;
+  transform: translateY(-2px) !important;
+}
+
+.cal-date-cell.selected .cal-num {
+  color: #040609 !important;
+  font-weight: 900 !important;
+}
+
+.cal-status-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10px;
+  margin-top: 4px;
+}
+
+.cal-status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.cal-status-dot.muhurtham {
+  background: #d4af37;
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.6);
+}
+
+.cal-status-dot.available {
+  background: #38bdf8;
+  box-shadow: 0 0 6px rgba(56, 189, 248, 0.6);
+}
+
+.cal-status-dot.filling {
+  background: #f59e0b;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.6);
+}
+
+.cal-date-cell.empty {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.cal-tap-hint {
+  background: rgba(14, 26, 46, 0.03) !important;
+  border: 1px dashed rgba(14, 26, 46, 0.15) !important;
+  color: #64748b !important;
+}
+
+.cal-tap-hint svg {
+  color: #b45309 !important;
+}
+
+/* RIGHT PANE: Inverted White Card + Dark Font Colors */
+.cal-right-pane {
+  position: sticky;
+  top: 90px;
+  z-index: 10;
+  min-width: 0;
+}
+
+.cal-info-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+  border-radius: 16px !important;
+  padding: 22px 20px !important;
+  box-shadow: 0 12px 35px rgba(14, 26, 46, 0.09) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.cal-info-header {
+  border-bottom: 1px solid rgba(14, 26, 46, 0.08) !important;
+  padding-bottom: 14px;
+}
+
+.cal-info-top-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.cal-info-date-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  height: 60px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%) !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.45) !important;
+  color: #0f172a !important;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.cal-info-date-day {
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1;
+  color: #0f172a !important;
+  font-family: var(--font-display, 'Cinzel', serif);
+}
+
+.cal-info-date-month {
+  font-size: 0.70rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #b45309 !important;
+  margin-top: 2px;
+}
+
+.cal-info-heading-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.cal-info-full-date {
+  font-family: var(--font-display, 'Cinzel', serif);
+  font-size: 1.15rem;
+  color: #0f172a !important;
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.cal-info-event-title {
+  font-size: 0.82rem;
+  color: #475569 !important;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.cal-status-badge-wrap {
+  margin-top: 10px;
+}
+
+.cal-minimal-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.cal-minimal-badge.muhurtham {
+  background: #fef3c7 !important;
+  color: #92400e !important;
+  border: 1px solid #fcd34d !important;
+}
+
+.cal-minimal-badge.available {
+  background: #e0f2fe !important;
+  color: #0369a1 !important;
+  border: 1px solid #bae6fd !important;
+}
+
+.cal-minimal-badge.filling {
+  background: #ffedd5 !important;
+  color: #c2410c !important;
+  border: 1px solid #fed7aa !important;
+}
+
+/* Price Estimation Box - Light Filling with Dark Text */
+.cal-price-estimate-box {
+  background: #f8fafc !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cal-price-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-estimate-title {
+  font-family: var(--font-display, 'Cinzel', serif);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a !important;
+}
+
+.price-calc-badge {
+  font-size: 0.68rem;
+  color: #92400e !important;
+  font-weight: 600;
+  background: rgba(212, 175, 55, 0.15) !important;
+  padding: 2px 7px;
+  border-radius: 10px;
+  border: 1px solid rgba(212, 175, 55, 0.4) !important;
+}
+
+.cal-guest-pills-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cal-guest-label {
+  font-size: 0.74rem;
+  color: #475569 !important;
+  font-weight: 600;
+}
+
+.cal-guest-chips {
+  display: flex;
+  gap: 6px;
+}
+
+.guest-chip {
+  padding: 4px 10px;
+  border-radius: 14px;
+  border: 1px solid rgba(14, 26, 46, 0.15) !important;
+  background: #ffffff !important;
+  color: #334155 !important;
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.guest-chip:hover {
+  background: #f1f5f9 !important;
+  border-color: rgba(212, 175, 55, 0.5) !important;
+}
+
+.guest-chip.active {
+  background: #d4af37 !important;
+  color: #040609 !important;
+  border-color: #d4af37 !important;
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3) !important;
+}
+
+.cal-price-breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: #475569 !important;
+}
+
+.price-item-val {
+  font-weight: 700;
+  color: #0f172a !important;
+}
+
+.price-divider {
+  height: 1px;
+  background: rgba(14, 26, 46, 0.08) !important;
+  margin: 4px 0;
+}
+
+.price-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #0f172a !important;
+}
+
+.price-total-val {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #b45309 !important;
+  font-family: var(--font-display, 'Cinzel', serif);
+}
+
+.cal-price-disclaimer {
+  font-size: 0.68rem;
+  color: #64748b !important;
+  margin: 0;
+  line-height: 1.35;
+}
+
+/* Action Button */
+.btn-whatsapp-minimal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 16px;
+  border-radius: 9px;
+  background: #25D366 !important;
+  color: #ffffff !important;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp-minimal:hover {
+  background: #20ba5a !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.45);
+}
+
+/* ==========================================================================
+   Home Page Schedule a Personal Venue Tour & Reserve Dates Section
+   ========================================================================== */
+
+.home-tour-section {
+  padding: 60px 0 70px;
+  background: #f8fafc !important;
+  position: relative;
+}
+
+.home-tour-section .booking-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+  border-radius: 16px;
+  padding: 42px 36px;
+  box-shadow: 0 12px 35px rgba(14, 26, 46, 0.08);
+}
+
+.home-tour-section .section-label {
+  color: #b45309 !important;
+}
+
+.home-tour-section .section-title {
+  color: #0f172a !important;
+}
+
+.home-tour-section .section-subtitle {
+  color: #475569 !important;
+}
+
+.home-tour-section .form-label {
+  color: #334155 !important;
+  font-weight: 700;
+}
+
+.home-tour-section .form-control {
+  background: #ffffff !important;
+  border: 1px solid rgba(14, 26, 46, 0.16) !important;
+  color: #0f172a !important;
+  border-radius: 8px;
+}
+
+.home-tour-section .form-control:focus {
+  border-color: #d4af37 !important;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15) !important;
+}
+
+@media (max-width: 768px) {
+  .home-tour-section {
+    padding: 40px 0 50px;
+  }
+  .home-tour-section .booking-card {
+    padding: 24px 18px;
   }
 }

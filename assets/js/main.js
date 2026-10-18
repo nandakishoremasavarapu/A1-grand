@@ -207,84 +207,134 @@ function initNavbar() {
    ========================================================================== */
 const defaultGalleryData = [
   {
-    id: 1,
-    title: "Main Convention Hall Interior",
-    category: "original",
-    categoryLabel: "Original Venue Photo",
-    isAuthentic: true,
-    imgSrc: "assets/images/real_convention_hall_hd.jpg",
-    caption: "Authentic view of A1 Grand Convention Hall featuring coffered warm-lit acoustic ceiling, reflective Italian-style flooring, and banquet seating setup.",
-    specs: "Capacity: 1,800+ | Pillar-Free | Central AC"
+    "id": 1,
+    "title": "Main Convention Hall Interior",
+    "category": "original",
+    "categoryLabel": "Convention Hall",
+    "isAuthentic": true,
+    "imgSrc": "assets/images/real_convention_hall_hd.jpg",
+    "caption": "Authentic view featuring coffered acoustic ceiling, reflective Italian flooring, and banquet seating setup.",
+    "specs": "Capacity: 1,800+ | Pillar-Free | Central AC"
   },
   {
-    id: 2,
-    title: "Grand Entrance Portico & Facade",
-    category: "ballroom",
-    categoryLabel: "Exterior Architecture",
-    isAuthentic: true,
-    imgSrc: "assets/images/grand_entrance_portico_authentic.jpg",
-    caption: "Authentic Grand Entrance Portico of A1 Grand featuring towering wood-paneled pillars, coffered canopy ceiling, decorated wedding arrival walkway with floral rangoli and red carpet runner, and modern glass facade.",
-    specs: "Rushikonda Beach Road | 400+ Car Valet Concourse"
+    "id": 2,
+    "title": "Grand Entrance Portico & Facade",
+    "category": "ballroom",
+    "categoryLabel": "Portico & Driveway",
+    "isAuthentic": true,
+    "imgSrc": "assets/images/grand_entrance_portico_authentic.jpg",
+    "caption": "Towering wood-paneled pillars, covered arrival canopy, red carpet walkway, and modern glass facade.",
+    "specs": "Rushikonda Beach Road | 400+ Car Valet Concourse"
   },
   {
-    id: 3,
-    title: "Authentic Royal Wedding Mandap & Stage",
-    category: "decor",
-    categoryLabel: "Wedding Decor",
-    isAuthentic: true,
-    imgSrc: "assets/images/real_wedding_mandap_authentic.jpg?v=3",
-    caption: "Authentic royal wedding mandap setup inside A1 Grand The Convention Hall, featuring towering floral canopy pillars, crystal chandeliers, red velvet bridal seating, and ambient stage illumination.",
-    specs: "Verified A1 Grand Mandap | 60ft Wide Stage | Central AC"
+    "id": 3,
+    "title": "Royal Wedding Mandap & Stage",
+    "category": "decor",
+    "categoryLabel": "Wedding Mandap",
+    "isAuthentic": true,
+    "imgSrc": "assets/images/real_wedding_mandap_authentic.jpg?v=3",
+    "caption": "Authentic floral canopy pillars, crystal chandeliers, red velvet bridal seating, and stage illumination.",
+    "specs": "Verified A1 Grand Mandap | 60ft Wide Stage | Central AC"
   },
   {
-    id: 4,
-    title: "Gourmet Live Spread & Banqueting",
-    category: "dining",
-    categoryLabel: "Culinary & Dining",
-    isAuthentic: true,
-    imgSrc: "assets/images/banquet_dining_authentic.jpg",
-    caption: "Authentic view of A1 Grand AC Banquet Dining Hall featuring round banquet table setups with white linens, polished flooring, recessed ceiling lighting, and spacious capacity for 800+ concurrent diners.",
-    specs: "800+ Seated Dining | Central AC | Dedicated Kitchens"
+    "id": 4,
+    "title": "Gourmet Live Spread & Banqueting",
+    "category": "dining",
+    "categoryLabel": "Dining Pavilion",
+    "isAuthentic": true,
+    "imgSrc": "assets/images/banquet_dining_authentic.jpg",
+    "caption": "Authentic AC banquet dining pavilion with round table setups, crisp linens, and 800+ dining capacity.",
+    "specs": "800+ Seated Dining | Central AC | Dedicated Kitchens"
   },
   {
-    id: 6,
-    title: "Luxury Presidential Bridal Suite",
-    category: "suites",
-    categoryLabel: "VIP Suites",
-    isAuthentic: true,
-    imgSrc: "assets/images/bridal_suite_authentic.jpg",
-    caption: "Authentic view of A1 Grand Luxury Presidential Bridal & Guest Suite featuring double bed with crisp white linens, wooden headboard, split air conditioning, modern furnishings, and private en-suite restroom.",
-    specs: "Verified A1 Grand Suite | Private AC Suite | Attached Restroom"
+    "id": 6,
+    "title": "Luxury Presidential Bridal Suite",
+    "category": "suites",
+    "categoryLabel": "VIP Bridal Suite",
+    "isAuthentic": true,
+    "imgSrc": "assets/images/bridal_suite_authentic.jpg",
+    "caption": "Authentic air-conditioned bridal bedroom suite with double bed, attached private bath, and dressing amenities.",
+    "specs": "Verified A1 Grand Suite | Private AC Suite | Attached Restroom"
   },
   {
-    id: 8,
-    title: "Main Hall Theater Seating Layout",
-    category: "ballroom",
-    categoryLabel: "Floor Plan & Layouts",
-    isAuthentic: true,
-    imgSrc: "assets/images/floorplan_theater_seating_layout.jpg",
-    caption: "Stage-to-hall seating layout featuring theater rows of banquet chairs, front-row leather lounges, and backlit decorative ceiling coffers.",
-    specs: "Capacity: 1,500 Seated | Pillar-Free Sightlines"
+    "id": 8,
+    "title": "Main Hall Theater Seating Layout",
+    "category": "ballroom",
+    "categoryLabel": "Seating Layout",
+    "isAuthentic": true,
+    "imgSrc": "assets/images/floorplan_theater_seating_layout.jpg",
+    "caption": "1,500 seated banquet layout with wide central procession aisle and pillar-free sightlines.",
+    "specs": "Capacity: 1,500 Seated | Pillar-Free Sightlines"
   },
   {
-    id: 9,
-    title: "Grand Stage & Hall Perspective",
-    category: "ballroom",
-    categoryLabel: "Floor Plan & Architecture",
-    isAuthentic: true,
-    imgSrc: "assets/images/floorplan_wide_perspective_hall.jpg",
-    caption: "Wide-angle perspective of the elevated polished black stage and unobstructed 2,500-capacity convention hall.",
-    specs: "60ft × 25ft Elevated Stage | Dual Side Ramps"
+    "id": 9,
+    "title": "Grand Stage & Hall Perspective",
+    "category": "ballroom",
+    "categoryLabel": "Stage & Architecture",
+    "isAuthentic": true,
+    "imgSrc": "assets/images/floorplan_wide_perspective_hall.jpg",
+    "caption": "Wide-angle perspective of the 60ft elevated stage and unobstructed 2,500-capacity convention hall.",
+    "specs": "60ft × 25ft Elevated Stage | Dual Side Ramps"
   },
   {
-    id: 10,
-    title: "Authentic Kalyana Mandapam Stage",
-    category: "decor",
-    categoryLabel: "Wedding Stage",
-    isAuthentic: true,
-    imgSrc: "assets/images/floorplan_stage_mandap_authentic.jpg",
-    caption: "Real wedding mandapam with floral canopy, tiered floral stage steps, royal settee, and traditional rangoli carpet.",
-    specs: "60ft Decorated Stage | Fresh Floral Accents"
+    "id": 10,
+    "title": "Authentic Kalyana Mandapam Stage",
+    "category": "decor",
+    "categoryLabel": "Stage Decor",
+    "isAuthentic": true,
+    "imgSrc": "assets/images/floorplan_stage_mandap_authentic.jpg",
+    "caption": "Real wedding mandapam with tiered floral stage steps, royal settee, and traditional rangoli carpet.",
+    "specs": "60ft Decorated Stage | Fresh Floral Accents"
+  },
+  {
+    "id": 11,
+    "title": "Glass Elevator & Modern Marble Staircase",
+    "category": "original",
+    "categoryLabel": "Interior Architecture",
+    "isAuthentic": true,
+    "imgSrc": "assets/images/glass_elevator_staircase_authentic.jpg",
+    "caption": "Modern glass passenger elevator, stainless steel railings, and polished granite staircase connecting hall levels.",
+    "specs": "High-Capacity Glass Elevator | Granite Staircase"
+  },
+  {
+    "id": 12,
+    "title": "Traditional Floral Entrance Portal & Festive Decor",
+    "category": "decor",
+    "categoryLabel": "Welcome Entrance",
+    "isAuthentic": true,
+    "imgSrc": "assets/images/floral_entrance_portal_authentic.jpg",
+    "caption": "Festive welcome arch with fresh flower garland headers, yellow marigold cascades, festive umbrellas, and traditional rangoli.",
+    "specs": "Grand Entrance Foyer | Floral Welcoming Arch"
+  },
+  {
+    "id": 13,
+    "title": "A1 Grand The Convention - Night Illumination",
+    "category": "original",
+    "categoryLabel": "Exterior Night View",
+    "isAuthentic": true,
+    "imgSrc": "assets/images/building_exterior_night_authentic.jpg",
+    "caption": "Stunning night view of the illuminated A1 Grand facade with warm wood-panel textures and glowing signage.",
+    "specs": "Night Illumination | Landmark Rushikonda Architecture"
+  },
+  {
+    "id": 14,
+    "title": "A1 Grand Landmark Convention Complex & Boulevard",
+    "category": "original",
+    "categoryLabel": "Venue Campus",
+    "isAuthentic": true,
+    "imgSrc": "assets/images/complex_wide_facade_authentic.jpg",
+    "caption": "Panoramic daytime view of the multi-acre A1 Grand convention complex along the Rushikonda scenic corridor.",
+    "specs": "Expansive Campus | Sprawling Frontage"
+  },
+  {
+    "id": 15,
+    "title": "Presidential Guest Wing & Private Entrance",
+    "category": "suites",
+    "categoryLabel": "VIP Guest Wing",
+    "isAuthentic": true,
+    "imgSrc": "assets/images/suite_wing_exterior_authentic.jpg",
+    "caption": "Dedicated presidential VIP guest wing with private parking portico, gated courtyard, and lush palm landscape.",
+    "specs": "Private VIP Wing | Dedicated Gated Access"
   }
 ];
 
@@ -1472,37 +1522,46 @@ function renderCalendar() {
   let html = '';
 
   for (let i = 0; i < current.startDayOfWeek; i++) {
-    html += `<div class="cal-date-cell empty" style="opacity: 0.12; cursor: default;"></div>`;
+    html += '<div class="cal-date-cell empty"></div>';
   }
 
   for (let d = 1; d <= current.days; d++) {
     const info = current.dates[d];
     let cellClass = '';
-    let tagHtml = '';
+    let dotHtml = '';
     const isSelected = (currentMonthIdx === selectedDateInfo.monthIdx && d === selectedDateInfo.day);
 
     if (info) {
-      cellClass = info.type;
-      const tagClass = info.type === 'muhurtham' ? 'muhurtham-tag' : (info.type === 'available' ? 'avail-tag' : 'filling-tag');
-      tagHtml = `<span class="cal-tag ${tagClass}">${info.label}</span>`;
+      cellClass = ' ' + info.type;
+      dotHtml = '<span class="cal-status-dot ' + info.type + '"></span>';
     }
 
     const selectedClass = isSelected ? ' selected' : '';
+    const titleAttr = info ? (info.label || info.title || '') : (d + ' ' + current.name);
 
-    html += `
-      <div class="cal-date-cell ${cellClass}${selectedClass}" data-day="${d}" onclick="selectCalendarDate(${d})" title="${info ? info.label : d + ' ' + current.name}">
-        <div class="cal-cell-head">
-          <span class="cal-num">${d}</span>
-          ${info && info.type === 'muhurtham' ? '<span class="cal-muhurtham-dot" title="Auspicious Muhurtham"></span>' : ''}
-          ${isSelected ? '<span class="cal-active-dot"></span>' : ''}
-        </div>
-        ${tagHtml}
-      </div>
-    `;
+    html += '<div class="cal-date-cell' + cellClass + selectedClass + '" data-day="' + d + '" onclick="selectCalendarDate(' + d + ')" title="' + titleAttr + '">' +
+            '  <span class="cal-num">' + d + '</span>' +
+            '  <div class="cal-status-row">' + dotHtml + '</div>' +
+            '</div>';
   }
 
   grid.innerHTML = html;
 }
+
+let currentGuestCount = 500;
+
+window.setCalendarGuests = function(num) {
+  currentGuestCount = num;
+  const chips = document.querySelectorAll('#calGuestChips .guest-chip');
+  chips.forEach(c => {
+    if (parseInt(c.getAttribute('data-guests'), 10) === num) {
+      c.classList.add('active');
+    } else {
+      c.classList.remove('active');
+    }
+  });
+  updateRightInfoPanel(selectedDateInfo.day, selectedDateInfo.monthIdx);
+};
 
 window.selectCalendarDate = function (day) {
   selectedDateInfo = { day: day, monthIdx: currentMonthIdx };
@@ -1511,18 +1570,10 @@ window.selectCalendarDate = function (day) {
   const allCells = document.querySelectorAll('#calendarGridDates .cal-date-cell');
   allCells.forEach(cell => {
     const cellDay = parseInt(cell.getAttribute('data-day'), 10);
-    const head = cell.querySelector('.cal-cell-head');
-    const existingDot = cell.querySelector('.cal-active-dot');
     if (cellDay === day) {
       cell.classList.add('selected');
-      if (head && !existingDot) {
-        const dot = document.createElement('span');
-        dot.className = 'cal-active-dot';
-        head.appendChild(dot);
-      }
     } else {
       cell.classList.remove('selected');
-      if (existingDot) existingDot.remove();
     }
   });
 
@@ -1532,7 +1583,7 @@ window.selectCalendarDate = function (day) {
   if (window.innerWidth <= 1024) {
     const infoPanel = document.getElementById('calInfoPanel');
     if (infoPanel) {
-      infoPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      infoPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
   }
 };
@@ -1552,33 +1603,58 @@ function updateRightInfoPanel(day, monthIdx) {
   const fullElem = document.getElementById('selectedDateFull');
   const badgeElem = document.getElementById('selectedDateTypeBadge');
   const titleElem = document.getElementById('selectedDateEventTitle');
-  const lagnaElem = document.getElementById('selectedDateLagnaText');
-  const availElem = document.getElementById('selectedDateAvailabilityTag');
 
   if (dayElem) dayElem.textContent = day < 10 ? '0' + day : day;
   if (monthElem) monthElem.textContent = current.shortName;
-  if (fullElem) fullElem.textContent = `${weekday}, ${day} ${current.name}`;
+  if (fullElem) fullElem.textContent = weekday + ', ' + day + ' ' + current.name;
 
+  // Availability Badge & Title (Zero emojis)
+  let isMuhurtham = false;
   if (info) {
+    isMuhurtham = info.type === 'muhurtham';
     if (badgeElem) {
-      badgeElem.className = 'cal-info-status-badge ' + info.type;
-      badgeElem.textContent = info.type === 'muhurtham' ? '✨ Auspicious Muhurtham' : (info.type === 'available' ? '🌟 Prime Weekend Date' : '⚡ Fast Filling Slot');
+      badgeElem.className = 'cal-minimal-badge ' + info.type;
+      if (info.type === 'muhurtham') {
+        badgeElem.textContent = 'Auspicious Muhurtham · High Demand';
+      } else if (info.type === 'available') {
+        badgeElem.textContent = 'Prime Weekend Slot · Available';
+      } else {
+        badgeElem.textContent = 'Fast Filling Date';
+      }
     }
-    if (titleElem) titleElem.textContent = `${info.label} (${current.name})`;
-    if (lagnaElem) lagnaElem.textContent = info.lagna || 'Morning Dhanur Lagna (05:45 AM – 08:15 AM) · Twilight Kumbha Lagna (06:45 PM – 09:15 PM)';
-    if (availElem) availElem.textContent = `⚡ ${info.status || 'Limited Slots'} · Priority Reservation Available`;
+    if (titleElem) titleElem.textContent = (info.label || info.title || 'Auspicious Occasion') + ' (' + current.name + ')';
   } else {
     if (badgeElem) {
-      badgeElem.className = 'cal-info-status-badge available';
-      badgeElem.textContent = isWeekend ? '🌟 Prime Weekend Date' : '🟢 Open Booking Date';
+      badgeElem.className = 'cal-minimal-badge available';
+      badgeElem.textContent = isWeekend ? 'Prime Weekend · Open Slot' : 'Standard Date · Available';
     }
-    if (titleElem) titleElem.textContent = isWeekend ? 'Prime Weekend Celebration Slot' : 'Available Convention Reservation Date';
-    if (lagnaElem) lagnaElem.textContent = 'Custom Muhurtham Lagna & Event Timings Supported · Central AC Halls & Lawns Open';
-    if (availElem) availElem.textContent = '🟢 Date Available · Exclusive Venue Hold Available';
+    if (titleElem) titleElem.textContent = isWeekend ? 'Weekend Celebration Booking' : 'Open Venue Reservation Date';
   }
 
-  // Update summary strip
-  updateLiveSummaryStrip();
+  // Price Estimation Calculation
+  const baseHallRent = isMuhurtham ? 250000 : 200000;
+  const plateRate = 1200;
+  const cateringCost = currentGuestCount * plateRate;
+  const totalEst = baseHallRent + cateringCost;
+
+  const fmt = (n) => '₹' + n.toLocaleString('en-IN');
+
+  const hallElem = document.getElementById('estHallRent');
+  const guestCountLabel = document.getElementById('estGuestCountLabel');
+  const cateringElem = document.getElementById('estCateringCost');
+  const totalElem = document.getElementById('estTotalPackage');
+  const whatsAppBtn = document.getElementById('calWhatsAppBtn');
+
+  if (hallElem) hallElem.textContent = fmt(baseHallRent);
+  if (guestCountLabel) guestCountLabel.textContent = currentGuestCount.toLocaleString('en-IN');
+  if (cateringElem) cateringElem.textContent = fmt(cateringCost);
+  if (totalElem) totalElem.textContent = fmt(totalEst);
+
+  if (whatsAppBtn) {
+    const fullDateText = day + ' ' + current.name;
+    const msg = encodeURIComponent('Hello A1 Grand, I would like to check availability and reserve for ' + fullDateText + ' (' + currentGuestCount + ' estimated guests).');
+    whatsAppBtn.href = 'https://api.whatsapp.com/send?phone=919848123456&text=' + msg;
+  }
 }
 
 function initCalendarInteractionListeners() {

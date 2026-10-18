@@ -120,19 +120,17 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           Brochure
         </button>
-        <a href="contact.html" class="btn btn-gold btn-sm">Reserve Date</a>
+        <a href="#contact" class="btn btn-gold btn-sm">Reserve Date</a>
       </div>
       <nav class="nav-menu" id="navMenu" aria-label="Main">
         <a href="index.html" class="nav-link active" aria-current="page">Home</a>
         
-        <a href="venues.html" class="nav-link">Venues</a>
         <a href="decor.html" class="nav-link">Decor</a>
         <a href="floorplan.html" class="nav-link">Floor Plans</a>
         <a href="catering.html" class="nav-link">Catering</a>
-        <a href="calendar.html" class="nav-link">Dates</a>
         <a href="calculator.html" class="nav-link">Cost Quote</a>
         <a href="location.html" class="nav-link">Location</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
@@ -250,290 +248,442 @@
   </section>
 
 
-  <!-- Home Page Continuous Flowing Slideshow Gallery Section -->
+  <!-- Home Page Continuous Flowing Slideshow Gallery Section (Raw Photos Only) -->
   <section class="home-gallery-section" id="gallery">
     <div class="container">
       <div class="home-gallery-controls-row">
         <div class="home-gallery-header-left">
           <span class="section-label">Authentic Visual Showcase</span>
           <h2 class="section-title">Gallery</h2>
-          <p class="section-subtitle">Real verified venue photographs of A1 Grand Convention Hall, Mandapam, Suites &amp; Dining. Hover cursor to pause the flow · Tap any photo to inspect in full HD.</p>
         </div>
         <div class="home-gallery-hint">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-          <span>Hover to pause · Click photo to pop up</span>
+          <span>Hover cursor to pause &middot; Click any photo to view full</span>
         </div>
       </div>
     </div>
 
-    <!-- Infinite Continuous Slideshow Moving Left-to-Right -->
+    <!-- Infinite Continuous Slideshow Moving Left-to-Right (Pure Raw Photos) -->
     <div class="home-gallery-marquee-wrap" id="homeGalleryContainer">
       <div class="home-gallery-flow-track" id="homeGalleryTrack">
-        <div class="home-flow-card" onclick="openLightboxByIndex(1)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/real_convention_hall_hd.jpg" alt="Main Convention Hall Interior" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">Convention Hall</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Main Convention Hall Interior</h4>
-            <p class="home-flow-desc">Authentic view featuring coffered acoustic ceiling, reflective Italian flooring, and banquet seating setup.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(1)" title="Click to view full photo">
+          <img src="assets/images/real_convention_hall_hd.jpg" alt="Main Convention Hall Interior" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(2)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/grand_entrance_portico_authentic.jpg" alt="Grand Entrance Portico & Facade" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">Portico & Driveway</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Grand Entrance Portico & Facade</h4>
-            <p class="home-flow-desc">Towering wood-paneled pillars, covered arrival canopy, red carpet walkway, and modern glass facade.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(2)" title="Click to view full photo">
+          <img src="assets/images/grand_entrance_portico_authentic.jpg" alt="Grand Entrance Portico & Facade" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(3)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/real_wedding_mandap_authentic.jpg?v=3" alt="Royal Wedding Mandap & Stage" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">Wedding Mandap</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Royal Wedding Mandap & Stage</h4>
-            <p class="home-flow-desc">Authentic floral canopy pillars, crystal chandeliers, red velvet bridal seating, and stage illumination.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(3)" title="Click to view full photo">
+          <img src="assets/images/real_wedding_mandap_authentic.jpg?v=3" alt="Royal Wedding Mandap & Stage" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(4)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/banquet_dining_authentic.jpg" alt="Gourmet Live Spread & Banqueting" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">Dining Pavilion</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Gourmet Live Spread & Banqueting</h4>
-            <p class="home-flow-desc">Authentic AC banquet dining pavilion with round table setups, crisp linens, and 800+ dining capacity.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(4)" title="Click to view full photo">
+          <img src="assets/images/banquet_dining_authentic.jpg" alt="Gourmet Live Spread & Banqueting" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(6)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/bridal_suite_authentic.jpg" alt="Luxury Presidential Bridal Suite" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">VIP Bridal Suite</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Luxury Presidential Bridal Suite</h4>
-            <p class="home-flow-desc">Authentic air-conditioned bridal bedroom suite with double bed, attached private bath, and dressing amenities.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(6)" title="Click to view full photo">
+          <img src="assets/images/bridal_suite_authentic.jpg" alt="Luxury Presidential Bridal Suite" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(8)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/floorplan_theater_seating_layout.jpg" alt="Main Hall Theater Seating Layout" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">Seating Layout</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Main Hall Theater Seating Layout</h4>
-            <p class="home-flow-desc">1,500 seated banquet layout with wide central procession aisle and pillar-free sightlines.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(8)" title="Click to view full photo">
+          <img src="assets/images/floorplan_theater_seating_layout.jpg" alt="Main Hall Theater Seating Layout" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(9)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/floorplan_wide_perspective_hall.jpg" alt="Grand Stage & Hall Perspective" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">Stage & Architecture</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Grand Stage & Hall Perspective</h4>
-            <p class="home-flow-desc">Wide-angle perspective of the 60ft elevated stage and unobstructed 2,500-capacity convention hall.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(9)" title="Click to view full photo">
+          <img src="assets/images/floorplan_wide_perspective_hall.jpg" alt="Grand Stage & Hall Perspective" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(10)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/floorplan_stage_mandap_authentic.jpg" alt="Authentic Kalyana Mandapam Stage" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">Stage Decor</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Authentic Kalyana Mandapam Stage</h4>
-            <p class="home-flow-desc">Real wedding mandapam with tiered floral stage steps, royal settee, and traditional rangoli carpet.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(10)" title="Click to view full photo">
+          <img src="assets/images/floorplan_stage_mandap_authentic.jpg" alt="Authentic Kalyana Mandapam Stage" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(1)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/real_convention_hall_hd.jpg" alt="Main Convention Hall Interior" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">Convention Hall</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Main Convention Hall Interior</h4>
-            <p class="home-flow-desc">Authentic view featuring coffered acoustic ceiling, reflective Italian flooring, and banquet seating setup.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(11)" title="Click to view full photo">
+          <img src="assets/images/glass_elevator_staircase_authentic.jpg" alt="Glass Elevator & Modern Marble Staircase" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(2)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/grand_entrance_portico_authentic.jpg" alt="Grand Entrance Portico & Facade" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">Portico & Driveway</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Grand Entrance Portico & Facade</h4>
-            <p class="home-flow-desc">Towering wood-paneled pillars, covered arrival canopy, red carpet walkway, and modern glass facade.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(12)" title="Click to view full photo">
+          <img src="assets/images/floral_entrance_portal_authentic.jpg" alt="Traditional Floral Entrance Portal & Festive Decor" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(3)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/real_wedding_mandap_authentic.jpg?v=3" alt="Royal Wedding Mandap & Stage" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">Wedding Mandap</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Royal Wedding Mandap & Stage</h4>
-            <p class="home-flow-desc">Authentic floral canopy pillars, crystal chandeliers, red velvet bridal seating, and stage illumination.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(13)" title="Click to view full photo">
+          <img src="assets/images/building_exterior_night_authentic.jpg" alt="A1 Grand The Convention - Night Illumination" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(4)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/banquet_dining_authentic.jpg" alt="Gourmet Live Spread & Banqueting" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">Dining Pavilion</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Gourmet Live Spread & Banqueting</h4>
-            <p class="home-flow-desc">Authentic AC banquet dining pavilion with round table setups, crisp linens, and 800+ dining capacity.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(14)" title="Click to view full photo">
+          <img src="assets/images/complex_wide_facade_authentic.jpg" alt="A1 Grand Landmark Convention Complex & Boulevard" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(6)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/bridal_suite_authentic.jpg" alt="Luxury Presidential Bridal Suite" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">VIP Bridal Suite</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Luxury Presidential Bridal Suite</h4>
-            <p class="home-flow-desc">Authentic air-conditioned bridal bedroom suite with double bed, attached private bath, and dressing amenities.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(15)" title="Click to view full photo">
+          <img src="assets/images/suite_wing_exterior_authentic.jpg" alt="Presidential Guest Wing & Private Entrance" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(8)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/floorplan_theater_seating_layout.jpg" alt="Main Hall Theater Seating Layout" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">Seating Layout</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Main Hall Theater Seating Layout</h4>
-            <p class="home-flow-desc">1,500 seated banquet layout with wide central procession aisle and pillar-free sightlines.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(1)" title="Click to view full photo">
+          <img src="assets/images/real_convention_hall_hd.jpg" alt="Main Convention Hall Interior" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(9)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/floorplan_wide_perspective_hall.jpg" alt="Grand Stage & Hall Perspective" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">Stage & Architecture</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Grand Stage & Hall Perspective</h4>
-            <p class="home-flow-desc">Wide-angle perspective of the 60ft elevated stage and unobstructed 2,500-capacity convention hall.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(2)" title="Click to view full photo">
+          <img src="assets/images/grand_entrance_portico_authentic.jpg" alt="Grand Entrance Portico & Facade" loading="lazy">
         </div>
-        <div class="home-flow-card" onclick="openLightboxByIndex(10)" title="Click to view enlarged photo">
-          <div class="home-flow-img-box">
-            <img src="assets/images/floorplan_stage_mandap_authentic.jpg" alt="Authentic Kalyana Mandapam Stage" loading="lazy">
-            <div class="home-flow-badge-strip">
-              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
-              <span class="home-flow-badge">Stage Decor</span>
-            </div>
-            <div class="home-flow-zoom-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-            </div>
-          </div>
-          <div class="home-flow-content">
-            <h4 class="home-flow-title">Authentic Kalyana Mandapam Stage</h4>
-            <p class="home-flow-desc">Real wedding mandapam with tiered floral stage steps, royal settee, and traditional rangoli carpet.</p>
-          </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(3)" title="Click to view full photo">
+          <img src="assets/images/real_wedding_mandap_authentic.jpg?v=3" alt="Royal Wedding Mandap & Stage" loading="lazy">
+        </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(4)" title="Click to view full photo">
+          <img src="assets/images/banquet_dining_authentic.jpg" alt="Gourmet Live Spread & Banqueting" loading="lazy">
+        </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(6)" title="Click to view full photo">
+          <img src="assets/images/bridal_suite_authentic.jpg" alt="Luxury Presidential Bridal Suite" loading="lazy">
+        </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(8)" title="Click to view full photo">
+          <img src="assets/images/floorplan_theater_seating_layout.jpg" alt="Main Hall Theater Seating Layout" loading="lazy">
+        </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(9)" title="Click to view full photo">
+          <img src="assets/images/floorplan_wide_perspective_hall.jpg" alt="Grand Stage & Hall Perspective" loading="lazy">
+        </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(10)" title="Click to view full photo">
+          <img src="assets/images/floorplan_stage_mandap_authentic.jpg" alt="Authentic Kalyana Mandapam Stage" loading="lazy">
+        </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(11)" title="Click to view full photo">
+          <img src="assets/images/glass_elevator_staircase_authentic.jpg" alt="Glass Elevator & Modern Marble Staircase" loading="lazy">
+        </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(12)" title="Click to view full photo">
+          <img src="assets/images/floral_entrance_portal_authentic.jpg" alt="Traditional Floral Entrance Portal & Festive Decor" loading="lazy">
+        </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(13)" title="Click to view full photo">
+          <img src="assets/images/building_exterior_night_authentic.jpg" alt="A1 Grand The Convention - Night Illumination" loading="lazy">
+        </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(14)" title="Click to view full photo">
+          <img src="assets/images/complex_wide_facade_authentic.jpg" alt="A1 Grand Landmark Convention Complex & Boulevard" loading="lazy">
+        </div>
+        <div class="home-raw-photo" onclick="openLightboxByIndex(15)" title="Click to view full photo">
+          <img src="assets/images/suite_wing_exterior_authentic.jpg" alt="Presidential Guest Wing & Private Entrance" loading="lazy">
         </div>
       </div>
     </div>
   </section>
 
-  <section class="explore-section" id="explore">
+<!-- Auspicious Muhurtham Dates & Availability Calendar Section -->
+  <section class="home-calendar-section" id="calendar">
+    <div class="container">
+      <div class="home-calendar-header-left">
+        <span class="section-label">Auspicious Dates &amp; Cost Estimation</span>
+        <h2 class="section-title">Muhurtham Calendar</h2>
+        <p class="section-subtitle">Select any date on the left to check availability and view an instant price estimation on the right.</p>
+      </div>
+
+      <!-- 2-Column Split: Calendar at Left, Minimalist Info & Pricing at Right -->
+      <div class="cal-split-layout">
+        
+        <!-- LEFT COLUMN: Minimalist High-Contrast Calendar -->
+        <div class="cal-left-pane">
+          <div class="cal-card-wrapper">
+
+            <div class="cal-header-bar">
+              <div class="cal-month-nav">
+                <button class="cal-nav-btn" id="calPrevBtn" aria-label="Previous Month">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <h3 class="cal-current-month" id="calMonthTitle">November 2026</h3>
+                <button class="cal-nav-btn" id="calNextBtn" aria-label="Next Month">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+
+              <div class="cal-legend">
+                <div class="legend-item">
+                  <span class="legend-dot muhurtham"></span>
+                  <span>Muhurtham Date</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot available"></span>
+                  <span>Prime Weekend</span>
+                </div>
+                <div class="legend-item">
+                  <span class="legend-dot filling"></span>
+                  <span>Fast Filling</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Month Quick Jump Selector -->
+            <div class="cal-month-pills" id="calMonthPills">
+              <button type="button" class="cal-month-pill active" data-idx="0" onclick="switchMuhurthamMonth(0)">NOV '26</button>
+              <button type="button" class="cal-month-pill" data-idx="1" onclick="switchMuhurthamMonth(1)">DEC '26</button>
+              <button type="button" class="cal-month-pill" data-idx="2" onclick="switchMuhurthamMonth(2)">JAN '27</button>
+              <button type="button" class="cal-month-pill" data-idx="3" onclick="switchMuhurthamMonth(3)">FEB '27</button>
+              <button type="button" class="cal-month-pill" data-idx="4" onclick="switchMuhurthamMonth(4)">MAR '27</button>
+              <button type="button" class="cal-month-pill" data-idx="5" onclick="switchMuhurthamMonth(5)">APR '27</button>
+              <button type="button" class="cal-month-pill" data-idx="6" onclick="switchMuhurthamMonth(6)">MAY '27</button>
+            </div>
+
+            <!-- Days of Week Header -->
+            <div class="calendar-grid cal-days-head" style="margin-bottom: 8px;">
+              <div class="cal-day-name">Sun</div>
+              <div class="cal-day-name">Mon</div>
+              <div class="cal-day-name">Tue</div>
+              <div class="cal-day-name">Wed</div>
+              <div class="cal-day-name">Thu</div>
+              <div class="cal-day-name">Fri</div>
+              <div class="cal-day-name">Sat</div>
+            </div>
+
+            <!-- Calendar Dates Grid with High-Contrast Numbers -->
+            <div class="calendar-grid" id="calendarGridDates">
+              <div class="cal-date-cell" data-day="1" onclick="selectCalendarDate(1)" title="1 November 2026">
+                <span class="cal-num">1</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="2" onclick="selectCalendarDate(2)" title="2 November 2026">
+                <span class="cal-num">2</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="3" onclick="selectCalendarDate(3)" title="3 November 2026">
+                <span class="cal-num">3</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell muhurtham selected" data-day="4" onclick="selectCalendarDate(4)" title="Karthika Pournami Vivaha Muhurtham">
+                <span class="cal-num">4</span>
+                <div class="cal-status-row">
+                  <span class="cal-status-dot muhurtham"></span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="5" onclick="selectCalendarDate(5)" title="5 November 2026">
+                <span class="cal-num">5</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="6" onclick="selectCalendarDate(6)" title="6 November 2026">
+                <span class="cal-num">6</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="7" onclick="selectCalendarDate(7)" title="7 November 2026">
+                <span class="cal-num">7</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell muhurtham" data-day="8" onclick="selectCalendarDate(8)" title="Vivaha Muhurtham">
+                <span class="cal-num">8</span>
+                <div class="cal-status-row">
+                  <span class="cal-status-dot muhurtham"></span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="9" onclick="selectCalendarDate(9)" title="9 November 2026">
+                <span class="cal-num">9</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="10" onclick="selectCalendarDate(10)" title="10 November 2026">
+                <span class="cal-num">10</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="11" onclick="selectCalendarDate(11)" title="11 November 2026">
+                <span class="cal-num">11</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="12" onclick="selectCalendarDate(12)" title="12 November 2026">
+                <span class="cal-num">12</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="13" onclick="selectCalendarDate(13)" title="13 November 2026">
+                <span class="cal-num">13</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell available" data-day="14" onclick="selectCalendarDate(14)" title="Prime Weekend Slot">
+                <span class="cal-num">14</span>
+                <div class="cal-status-row">
+                  <span class="cal-status-dot available"></span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="15" onclick="selectCalendarDate(15)" title="15 November 2026">
+                <span class="cal-num">15</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="16" onclick="selectCalendarDate(16)" title="16 November 2026">
+                <span class="cal-num">16</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="17" onclick="selectCalendarDate(17)" title="17 November 2026">
+                <span class="cal-num">17</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="18" onclick="selectCalendarDate(18)" title="18 November 2026">
+                <span class="cal-num">18</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell muhurtham" data-day="19" onclick="selectCalendarDate(19)" title="Grand Vivaha Lagna">
+                <span class="cal-num">19</span>
+                <div class="cal-status-row">
+                  <span class="cal-status-dot muhurtham"></span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="20" onclick="selectCalendarDate(20)" title="20 November 2026">
+                <span class="cal-num">20</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="21" onclick="selectCalendarDate(21)" title="21 November 2026">
+                <span class="cal-num">21</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell available" data-day="22" onclick="selectCalendarDate(22)" title="Sunday Reception Slot">
+                <span class="cal-num">22</span>
+                <div class="cal-status-row">
+                  <span class="cal-status-dot available"></span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="23" onclick="selectCalendarDate(23)" title="23 November 2026">
+                <span class="cal-num">23</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="24" onclick="selectCalendarDate(24)" title="24 November 2026">
+                <span class="cal-num">24</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="25" onclick="selectCalendarDate(25)" title="25 November 2026">
+                <span class="cal-num">25</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="26" onclick="selectCalendarDate(26)" title="26 November 2026">
+                <span class="cal-num">26</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell muhurtham" data-day="27" onclick="selectCalendarDate(27)" title="Shubha Vivaha">
+                <span class="cal-num">27</span>
+                <div class="cal-status-row">
+                  <span class="cal-status-dot muhurtham"></span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="28" onclick="selectCalendarDate(28)" title="28 November 2026">
+                <span class="cal-num">28</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+              <div class="cal-date-cell available" data-day="29" onclick="selectCalendarDate(29)" title="Sangeet & Party Slot">
+                <span class="cal-num">29</span>
+                <div class="cal-status-row">
+                  <span class="cal-status-dot available"></span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="30" onclick="selectCalendarDate(30)" title="30 November 2026">
+                <span class="cal-num">30</span>
+                <div class="cal-status-row">
+                  
+                </div>
+              </div>
+            </div>
+
+            <div class="cal-tap-hint">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Click any date above to view availability &amp; cost estimation on the right.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Minimalist Date Info, Availability & Price Estimation -->
+        <div class="cal-right-pane" id="calInfoPanel">
+          <div class="cal-info-card">
+
+            <!-- Selected Date & Title -->
+            <div class="cal-info-header">
+              <div class="cal-info-top-row">
+                <div class="cal-info-date-badge">
+                  <span class="cal-info-date-day" id="selectedDateDay">04</span>
+                  <span class="cal-info-date-month" id="selectedDateMonth">NOV</span>
+                </div>
+                <div class="cal-info-heading-wrap">
+                  <h3 class="cal-info-full-date" id="selectedDateFull">Wednesday, 4 November 2026</h3>
+                  <div class="cal-info-event-title" id="selectedDateEventTitle">Karthika Pournami Vivaha Muhurtham</div>
+                </div>
+              </div>
+              <div class="cal-status-badge-wrap" style="margin-top: 10px;">
+                <span class="cal-minimal-badge muhurtham" id="selectedDateTypeBadge">Auspicious Muhurtham &middot; High Demand</span>
+              </div>
+            </div>
+
+            <!-- Price Estimation Block -->
+            <div class="cal-price-estimate-box">
+              <div class="cal-price-head">
+                <span class="price-estimate-title">Price Estimation</span>
+                <span class="price-calc-badge" id="estBaseRateNote">Central AC Convention</span>
+              </div>
+
+              <!-- Guest Scale Selector -->
+              <div class="cal-guest-pills-row">
+                <span class="cal-guest-label">Guest Scale:</span>
+                <div class="cal-guest-chips" id="calGuestChips">
+                  <button type="button" class="guest-chip" data-guests="300" onclick="setCalendarGuests(300)">300</button>
+                  <button type="button" class="guest-chip active" data-guests="500" onclick="setCalendarGuests(500)">500</button>
+                  <button type="button" class="guest-chip" data-guests="800" onclick="setCalendarGuests(800)">800</button>
+                  <button type="button" class="guest-chip" data-guests="1200" onclick="setCalendarGuests(1200)">1,200</button>
+                </div>
+              </div>
+
+              <!-- Breakdown Lines -->
+              <div class="cal-price-breakdown">
+                <div class="price-row">
+                  <span>Main Hall Rental (AC):</span>
+                  <span class="price-item-val" id="estHallRent">&#8377;2,50,000</span>
+                </div>
+                <div class="price-row">
+                  <span>Live Catering (<span id="estGuestCountLabel">500</span> &times; &#8377;1,200):</span>
+                  <span class="price-item-val" id="estCateringCost">&#8377;6,00,000</span>
+                </div>
+                <div class="price-divider"></div>
+                <div class="price-total-row">
+                  <span>Estimated Total:</span>
+                  <span class="price-total-val" id="estTotalPackage">&#8377;8,50,000</span>
+                </div>
+              </div>
+              <p class="cal-price-disclaimer">*Estimated cost for AC Convention Hall, dining pavilion, and standard amenities.</p>
+            </div>
+
+            <!-- Minimalist Action CTA -->
+            <div class="cal-action-box">
+              <a href="https://api.whatsapp.com/send?phone=919848123456&text=Hello%20A1%20Grand%2C%20I%20would%20like%20to%20check%20availability%20and%20reserve%20for%204%20November%202026%20(Estimated%20500%20Guests)." 
+                 target="_blank" rel="noopener noreferrer" class="btn-whatsapp-minimal" id="calWhatsAppBtn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>Reserve Date via WhatsApp</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="explore-section" id="venues">
     <div class="container">
       <div class="section-head text-center">
-        <h2 class="section-title">Everything for your celebration</h2>
-        <p class="section-subtitle mx-auto">Each part of the venue has its own page. Start anywhere.</p>
+        <span class="section-label">Our Event Spaces</span>
+        <h2 class="section-title">Venues</h2>
+        <p class="section-subtitle mx-auto">Explore our grand convention halls, banquet dining, and serene coastal lawn spaces.</p>
       </div>
       <div class="explore-grid">
         <a class="explore-card" href="#gallery">
@@ -588,7 +738,7 @@
           </span>
         </a>
 
-        <a class="explore-card" href="calendar.html">
+        <a class="explore-card" href="#calendar">
           <span class="explore-img" style="background-image:url('assets/images/bridal_suite_authentic.jpg')"></span>
           <span class="explore-body">
             <strong>Muhurtham dates</strong>
@@ -611,6 +761,71 @@
             <span>Rushikonda beach road, with directions</span>
           </span>
         </a>
+      </div>
+    </div>
+  
+<!-- Schedule a Personal Venue Tour & Reserve Dates Section -->
+  <section class="booking-section home-tour-section" id="contact">
+    <div class="container">
+      <div class="booking-card">
+        <div class="section-head text-center" style="margin-bottom: 24px;">
+          <span class="section-label">Personal Venue Consultation</span>
+          <h2 class="section-title">Schedule a Personal Venue Tour &amp; Reserve Dates</h2>
+          <p class="section-subtitle mx-auto">
+            Popular wedding and auspicious muhurtham dates fill up months in advance. Schedule an in-person walkthrough of our grand convention hall, mandap stage, dining pavilion, and suites with our dedicated event director.
+          </p>
+        </div>
+
+        <form id="bookingForm">
+          <div class="booking-form-grid">
+            <div>
+              <label class="form-label" for="inqName">Your Full Name *</label>
+              <input type="text" id="inqName" class="form-control" placeholder="e.g. Venkat Rao" required>
+            </div>
+
+            <div>
+              <label class="form-label" for="inqPhone">Mobile Number (WhatsApp) *</label>
+              <input type="tel" id="inqPhone" class="form-control" placeholder="e.g. 98480 12345" required>
+            </div>
+
+            <div>
+              <label class="form-label" for="inqEventType">Event Type *</label>
+              <select id="inqEventType" class="form-control">
+                <option value="Wedding">Grand Wedding Ceremony</option>
+                <option value="Wedding Reception">Wedding Reception</option>
+                <option value="Sangeet / Mehendi">Sangeet / Mehendi Function</option>
+                <option value="Corporate Summit">Corporate Convention / Expo</option>
+                <option value="Birthday / Anniversary">Birthday / Anniversary Gala</option>
+                <option value="Other">Other Private Event</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="form-label" for="inqDate">Preferred Date</label>
+              <input type="date" id="inqDate" class="form-control">
+            </div>
+
+            <div class="full-col">
+              <label class="form-label" for="inqGuests">Expected Number of Guests</label>
+              <input type="number" id="inqGuests" class="form-control" placeholder="e.g. 500" value="500">
+            </div>
+
+            <div class="full-col">
+              <label class="form-label" for="inqMessage">Specific Decor, Catering or Timing Requirements</label>
+              <textarea id="inqMessage" class="form-control" placeholder="Please mention if you require bridal rooms, specific catering packages, or multi-day reservations..."></textarea>
+            </div>
+
+            <div class="full-col" style="text-align: center; margin-top: 15px;">
+              <button type="submit" class="btn btn-gold" style="width: 100%; max-width: 440px; padding: 16px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                Send Inquiry via WhatsApp Direct &rarr;
+              </button>
+              <p style="font-size: 0.78rem; color: var(--text-dim); margin-top: 10px;">
+                Instant response from our on-site venue coordinator. No spam guaranteed.
+              </p>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </section>
