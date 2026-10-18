@@ -106,7 +106,6 @@
       </div>
       <nav class="nav-menu" id="navMenu" aria-label="Main">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="venues.html" class="nav-link">Venues</a>
         <a href="decor.html" class="nav-link">Decor</a>
         <a href="floorplan.html" class="nav-link active" aria-current="page">Floor Plans</a>
@@ -135,9 +134,8 @@
 
       <!-- Hall-Wise Filter Tabs -->
       <div class="hall-tabs-bar">
-        <button class="hall-tab-btn active" data-hall-filter="all">All Halls &amp; Spaces (5)</button>
+        <button class="hall-tab-btn active" data-hall-filter="all">All Halls &amp; Spaces</button>
         <button class="hall-tab-btn" data-hall-filter="main-hall">Main Hall (Indoor Space)</button>
-        <button class="hall-tab-btn" data-hall-filter="coastal-lawn">Royal Coastal Lawn</button>
         <button class="hall-tab-btn" data-hall-filter="dining-pavilion">Imperial Dining Pavilion</button>
         <button class="hall-tab-btn" data-hall-filter="vip-suites">VIP Bridal Suites</button>
         <button class="hall-tab-btn" data-hall-filter="grand-portico">Entrance &amp; Valet</button>
@@ -250,37 +248,11 @@
           </div>
         </div>
 
-        <!-- CARD 5: Royal Coastal Lawn -->
-        <div class="hall-card" data-hall="coastal-lawn" onclick="openHallInfoModal('coastal-lawn', 0)">
-          <div class="hall-card-thumb">
-            <img src="assets/images/outdoor_lawn_evening_1792227047846.jpg" alt="A1 Grand Royal Coastal Lawn at Dusk" loading="lazy">
-            <span class="hall-card-badge">18,000 Sq.Ft · Oceanfront</span>
-            <span class="hall-card-overlay-hint">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-              Tap to view Hall Info &amp; Specs
-            </span>
-          </div>
-          <div class="hall-card-body">
-            <div class="hall-card-space-tag">Outdoor Lawn · Open-Air</div>
-            <h4 class="hall-card-title">Royal Coastal Lawn at Dusk</h4>
-            <p class="hall-card-desc">Fairy-lit green lawn with gentle Rushikonda sea breezes, live tawa and barbecue stations, and romantic open sky ambiance.</p>
-            <div class="hall-card-specs-row">
-              <span class="hall-card-spec-tag"><strong>Capacity:</strong> 800 - 1,500+</span>
-              <span class="hall-card-spec-tag"><strong>Area:</strong> 18,000 Sq.Ft</span>
-              <span class="hall-card-spec-tag"><strong>Ideal:</strong> Sangeet &amp; Receptions</span>
-            </div>
-            <button class="hall-card-cta" type="button">
-              <span>View Hall Information</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- CARD 6: Imperial Dining Pavilion - Dining Hall -->
+        <!-- CARD 5: Imperial Dining Pavilion - Live Spread & Dining Hall (Authentic Photo) -->
         <div class="hall-card" data-hall="dining-pavilion" onclick="openHallInfoModal('dining-pavilion', 0)">
           <div class="hall-card-thumb">
-            <img src="assets/images/grand_banquet_dining_1792227102798.jpg" alt="A1 Grand Imperial Dining Pavilion" loading="lazy">
-            <span class="hall-card-badge">800+ Seated Dining</span>
+            <img src="assets/images/banquet_dining_authentic.jpg" alt="A1 Grand Authentic Banquet Dining Hall" loading="lazy">
+            <span class="hall-card-badge">Authentic Photo · 800+ Dining</span>
             <span class="hall-card-overlay-hint">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
               Tap to view Hall Info &amp; Specs
@@ -288,37 +260,11 @@
           </div>
           <div class="hall-card-body">
             <div class="hall-card-space-tag">Dining Pavilion · Air Conditioned</div>
-            <h4 class="hall-card-title">Imperial Dining Pavilion</h4>
-            <p class="hall-card-desc">Dedicated AC dining concourse with twin parallel buffet tracks, 400 guests/min flow rate, and segregated veg &amp; non-veg kitchens.</p>
-            <div class="hall-card-specs-row">
-              <span class="hall-card-spec-tag"><strong>Seating:</strong> 800 Concurrent</span>
-              <span class="hall-card-spec-tag"><strong>Doors:</strong> 3 Acoustic 16ft Portals</span>
-              <span class="hall-card-spec-tag"><strong>Kitchens:</strong> Dual Segregated</span>
-            </div>
-            <button class="hall-card-cta" type="button">
-              <span>View Hall Information</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-            </button>
-          </div>
-        </div>
-
-        <!-- CARD 7: Imperial Dining Pavilion - Live Spread -->
-        <div class="hall-card" data-hall="dining-pavilion" onclick="openHallInfoModal('dining-pavilion', 1)">
-          <div class="hall-card-thumb">
-            <img src="assets/images/gourmet_live_spread_1792227989164.jpg" alt="Gourmet Live Spread & Banqueting" loading="lazy">
-            <span class="hall-card-badge">Gourmet Catering</span>
-            <span class="hall-card-overlay-hint">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-              Tap to view Hall Info &amp; Specs
-            </span>
-          </div>
-          <div class="hall-card-body">
-            <div class="hall-card-space-tag">Dining Pavilion · Live Counters</div>
             <h4 class="hall-card-title">Gourmet Live Spread &amp; Banqueting</h4>
-            <p class="hall-card-desc">Interactive live culinary stations, clay oven tandoors, hot chaat counters, and traditional Andhra dessert displays.</p>
+            <p class="hall-card-desc">Spacious indoor central AC dining hall featuring round banquet tables with white linens, recessed illumination, and dual kitchens.</p>
             <div class="hall-card-specs-row">
-              <span class="hall-card-spec-tag"><strong>Catering:</strong> Veg &amp; Non-Veg</span>
-              <span class="hall-card-spec-tag"><strong>Format:</strong> Buffet / Leaf Seated</span>
+              <span class="hall-card-spec-tag"><strong>Capacity:</strong> 800+ Seated</span>
+              <span class="hall-card-spec-tag"><strong>Layout:</strong> Round Tables</span>
               <span class="hall-card-spec-tag"><strong>Rate:</strong> from ₹1,200/plate</span>
             </div>
             <button class="hall-card-cta" type="button">
@@ -328,24 +274,24 @@
           </div>
         </div>
 
-        <!-- CARD 8: VIP Executive & Bridal Suites -->
+        <!-- CARD 6: VIP Executive & Bridal Suites (Authentic Photo) -->
         <div class="hall-card" data-hall="vip-suites" onclick="openHallInfoModal('vip-suites', 0)">
           <div class="hall-card-thumb">
-            <img src="assets/images/luxury_bridal_suite_1792227198649.jpg" alt="VIP Presidential Bridal Dressing Suite" loading="lazy">
-            <span class="hall-card-badge">4 Private AC Suites</span>
+            <img src="assets/images/bridal_suite_authentic.jpg" alt="A1 Grand Authentic VIP Presidential Bridal Suite" loading="lazy">
+            <span class="hall-card-badge">Authentic Photo · 4 AC Suites</span>
             <span class="hall-card-overlay-hint">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
               Tap to view Hall Info &amp; Specs
             </span>
           </div>
           <div class="hall-card-body">
-            <div class="hall-card-space-tag">VIP Suites · Green Rooms</div>
-            <h4 class="hall-card-title">VIP &amp; Bridal Dressing Suites</h4>
-            <p class="hall-card-desc">Direct backstage access suites with theatrical vanity mirrors, attached private western restrooms, and lockable security cabinets.</p>
+            <div class="hall-card-space-tag">VIP Suites · Presidential Dressing Suite</div>
+            <h4 class="hall-card-title">VIP Presidential Bridal Suite</h4>
+            <p class="hall-card-desc">Authentic air-conditioned bridal bedroom suite with double bed, attached private western restroom, television, and lockable wardrobes.</p>
             <div class="hall-card-specs-row">
               <span class="hall-card-spec-tag"><strong>Suites:</strong> 4 Dedicated Rooms</span>
-              <span class="hall-card-spec-tag"><strong>Access:</strong> Keycard Backstage</span>
-              <span class="hall-card-spec-tag"><strong>AC:</strong> Independent 2TR</span>
+              <span class="hall-card-spec-tag"><strong>Bed Setup:</strong> Double Bed &amp; Linens</span>
+              <span class="hall-card-spec-tag"><strong>AC:</strong> Independent Split AC</span>
             </div>
             <button class="hall-card-cta" type="button">
               <span>View Hall Information</span>
@@ -354,11 +300,11 @@
           </div>
         </div>
 
-        <!-- CARD 9: Grand Entrance Portico & Valet Concourse -->
+        <!-- CARD 9: Grand Entrance Portico & Valet Concourse (Authentic Photo) -->
         <div class="hall-card" data-hall="grand-portico" onclick="openHallInfoModal('grand-portico', 0)">
           <div class="hall-card-thumb">
-            <img src="assets/images/grand_entrance_portico_1792227612220.jpg" alt="A1 Grand Entrance Portico & Facade" loading="lazy">
-            <span class="hall-card-badge">400+ Car Valet Parking</span>
+            <img src="assets/images/grand_entrance_portico_authentic.jpg" alt="A1 Grand Authentic Entrance Portico & Facade" loading="lazy">
+            <span class="hall-card-badge">Authentic Photo · 400+ Valet Parking</span>
             <span class="hall-card-overlay-hint">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
               Tap to view Hall Info &amp; Specs
@@ -367,11 +313,11 @@
           <div class="hall-card-body">
             <div class="hall-card-space-tag">Arrival Concourse · Parking</div>
             <h4 class="hall-card-title">Grand Entrance Portico &amp; Facade</h4>
-            <p class="hall-card-desc">Neoclassical architecture with covered valet drop-off concourse, wide grand VIP gates, and paved parking for 400+ vehicles.</p>
+            <p class="hall-card-desc">Authentic entrance portico with decorated welcome walkway, floral rangoli aisle, covered valet drop-off concourse, and 400+ car parking.</p>
             <div class="hall-card-specs-row">
               <span class="hall-card-spec-tag"><strong>Parking:</strong> 400+ Four-Wheelers</span>
               <span class="hall-card-spec-tag"><strong>Valet:</strong> Uniformed Team</span>
-              <span class="hall-card-spec-tag"><strong>Location:</strong> Beach Road, Rushikonda</span>
+              <span class="hall-card-spec-tag"><strong>Decor:</strong> Floral Welcome Aisle</span>
             </div>
             <button class="hall-card-cta" type="button">
               <span>View Hall Information</span>
@@ -468,7 +414,7 @@
         <p>Visakhapatnam's premier coastal destination for weddings, receptions and corporate gatherings.</p>
       </div>
       <div class="footer-grid">
-        <div><h4 class="footer-heading">Explore</h4><div class="footer-links"><a href="gallery.html">Photo Gallery</a><a href="venues.html">Venue Spaces</a><a href="decor.html">Wedding Decor</a><a href="floorplan.html">Floor Plans</a><a href="catering.html">Feast Builder</a><a href="calendar.html">Muhurtham Dates</a><a href="calculator.html">Instant Cost Quote</a></div></div>
+        <div><h4 class="footer-heading">Explore</h4><div class="footer-links"><a href="index.html#gallery">Photo Gallery</a><a href="venues.html">Venue Spaces</a><a href="decor.html">Wedding Decor</a><a href="floorplan.html">Floor Plans</a><a href="catering.html">Feast Builder</a><a href="calendar.html">Muhurtham Dates</a><a href="calculator.html">Instant Cost Quote</a></div></div>
         <div><h4 class="footer-heading">Occasions</h4><div class="footer-links">
           <a href="contact.html">Weddings</a><a href="contact.html">Receptions</a><a href="contact.html">Corporate Summits</a><a href="contact.html">Sangeet Celebrations</a><a href="contact.html">Cultural Festivals</a></div></div>
         <div><h4 class="footer-heading">Contact &amp; Location</h4>

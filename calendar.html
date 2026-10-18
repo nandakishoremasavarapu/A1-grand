@@ -51,7 +51,7 @@
 
   <meta name="theme-color" content="#ffffff">
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css?v=4">
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
 <body data-page="calendar.html">
 
@@ -106,7 +106,6 @@
       </div>
       <nav class="nav-menu" id="navMenu" aria-label="Main">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="venues.html" class="nav-link">Venues</a>
         <a href="decor.html" class="nav-link">Decor</a>
         <a href="floorplan.html" class="nav-link">Floor Plans</a>
@@ -120,16 +119,16 @@
   </header>
 
   <main id="main">
-<div class="page-banner" style="background-image:url('assets/images/luxury_bridal_suite_1792227198649.jpg')" role="img" aria-label=""><div class="page-banner-fade"></div></div>
+<div class="page-banner" style="background-image:url('assets/images/bridal_suite_authentic.jpg')" role="img" aria-label="A1 Grand Authentic Presidential Bridal Suite"><div class="page-banner-fade"></div></div>
 
 <!-- Auspicious Muhurtham Dates Calendar -->
   <section class="calendar-section" id="calendar">
     <div class="container">
       <div class="section-head text-center">
-        <span class="section-label">Auspicious Dates &amp; Instant WhatsApp Booking</span>
-        <h2 class="section-title">2026 - 2027 Wedding Muhurtham Calendar</h2>
+        <span class="section-label">Auspicious Wedding Dates &amp; Timings</span>
+        <h2 class="section-title">2026 – 2027 Wedding Muhurtham Calendar</h2>
         <p class="section-subtitle mx-auto">
-          Explore prime auspicious marriage muhurthams and weekend dates. Tap any date on the left to inspect timings, choose your hall &amp; services on the right, and reserve instantly via WhatsApp.
+          Explore auspicious vivaha muhurtham dates and favorable timing windows. Select any date to configure your hall space, in-house services, and reserve instantly via WhatsApp.
         </p>
       </div>
 
@@ -139,6 +138,7 @@
         <!-- LEFT COLUMN: The Muhurtham Calendar -->
         <div class="cal-left-pane">
           <div class="cal-card-wrapper">
+
             <div class="cal-header-bar">
               <div class="cal-month-nav">
                 <button class="cal-nav-btn" id="calPrevBtn" aria-label="Previous Month">
@@ -168,7 +168,13 @@
 
             <!-- Month Quick Jump Selector -->
             <div class="cal-month-pills" id="calMonthPills">
-              <!-- Rendered dynamically by main.js -->
+<button type="button" class="cal-month-pill active" data-idx="0" onclick="switchMuhurthamMonth(0)">NOV '26</button>
+              <button type="button" class="cal-month-pill" data-idx="1" onclick="switchMuhurthamMonth(1)">DEC '26</button>
+              <button type="button" class="cal-month-pill" data-idx="2" onclick="switchMuhurthamMonth(2)">JAN '27</button>
+              <button type="button" class="cal-month-pill" data-idx="3" onclick="switchMuhurthamMonth(3)">FEB '27</button>
+              <button type="button" class="cal-month-pill" data-idx="4" onclick="switchMuhurthamMonth(4)">MAR '27</button>
+              <button type="button" class="cal-month-pill" data-idx="5" onclick="switchMuhurthamMonth(5)">APR '27</button>
+              <button type="button" class="cal-month-pill" data-idx="6" onclick="switchMuhurthamMonth(6)">MAY '27</button>
             </div>
 
             <!-- Days of Week Header -->
@@ -184,12 +190,173 @@
 
             <!-- Calendar Dates Grid -->
             <div class="calendar-grid" id="calendarGridDates">
-              <!-- Injected dynamically by main.js -->
+<div class="cal-date-cell" data-day="1" onclick="selectCalendarDate(1)" title="1 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">1</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="2" onclick="selectCalendarDate(2)" title="2 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">2</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="3" onclick="selectCalendarDate(3)" title="3 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">3</span>
+                </div>
+              </div>
+              <div class="cal-date-cell muhurtham selected" data-day="4" onclick="selectCalendarDate(4)" title="Karthika Pournami">
+                <div class="cal-cell-head">
+                  <span class="cal-num">4</span>
+                  <span class="cal-muhurtham-dot" title="Auspicious Muhurtham"></span>
+                  <span class="cal-active-dot"></span>
+                </div>
+                <span class="cal-tag muhurtham-tag">Karthika Pournami</span>
+              </div>
+              <div class="cal-date-cell" data-day="5" onclick="selectCalendarDate(5)" title="5 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">5</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="6" onclick="selectCalendarDate(6)" title="6 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">6</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="7" onclick="selectCalendarDate(7)" title="7 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">7</span>
+                </div>
+              </div>
+              <div class="cal-date-cell muhurtham" data-day="8" onclick="selectCalendarDate(8)" title="Vivaha Muhurtham">
+                <div class="cal-cell-head">
+                  <span class="cal-num">8</span>
+                  <span class="cal-muhurtham-dot" title="Auspicious Muhurtham"></span>
+                </div>
+                <span class="cal-tag muhurtham-tag">Vivaha Muhurtham</span>
+              </div>
+              <div class="cal-date-cell" data-day="9" onclick="selectCalendarDate(9)" title="9 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">9</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="10" onclick="selectCalendarDate(10)" title="10 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">10</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="11" onclick="selectCalendarDate(11)" title="11 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">11</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="12" onclick="selectCalendarDate(12)" title="12 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">12</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="13" onclick="selectCalendarDate(13)" title="13 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">13</span>
+                </div>
+              </div>
+              <div class="cal-date-cell available" data-day="14" onclick="selectCalendarDate(14)" title="Prime Weekend">
+                <div class="cal-cell-head">
+                  <span class="cal-num">14</span>
+                </div>
+                <span class="cal-tag avail-tag">Prime Weekend</span>
+              </div>
+              <div class="cal-date-cell" data-day="15" onclick="selectCalendarDate(15)" title="15 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">15</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="16" onclick="selectCalendarDate(16)" title="16 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">16</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="17" onclick="selectCalendarDate(17)" title="17 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">17</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="18" onclick="selectCalendarDate(18)" title="18 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">18</span>
+                </div>
+              </div>
+              <div class="cal-date-cell muhurtham" data-day="19" onclick="selectCalendarDate(19)" title="Grand Vivaha Lagna">
+                <div class="cal-cell-head">
+                  <span class="cal-num">19</span>
+                  <span class="cal-muhurtham-dot" title="Auspicious Muhurtham"></span>
+                </div>
+                <span class="cal-tag muhurtham-tag">Grand Vivaha Lagna</span>
+              </div>
+              <div class="cal-date-cell" data-day="20" onclick="selectCalendarDate(20)" title="20 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">20</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="21" onclick="selectCalendarDate(21)" title="21 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">21</span>
+                </div>
+              </div>
+              <div class="cal-date-cell available" data-day="22" onclick="selectCalendarDate(22)" title="Sunday Reception">
+                <div class="cal-cell-head">
+                  <span class="cal-num">22</span>
+                </div>
+                <span class="cal-tag avail-tag">Sunday Reception</span>
+              </div>
+              <div class="cal-date-cell" data-day="23" onclick="selectCalendarDate(23)" title="23 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">23</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="24" onclick="selectCalendarDate(24)" title="24 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">24</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="25" onclick="selectCalendarDate(25)" title="25 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">25</span>
+                </div>
+              </div>
+              <div class="cal-date-cell" data-day="26" onclick="selectCalendarDate(26)" title="26 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">26</span>
+                </div>
+              </div>
+              <div class="cal-date-cell muhurtham" data-day="27" onclick="selectCalendarDate(27)" title="Shubha Vivaha">
+                <div class="cal-cell-head">
+                  <span class="cal-num">27</span>
+                  <span class="cal-muhurtham-dot" title="Auspicious Muhurtham"></span>
+                </div>
+                <span class="cal-tag muhurtham-tag">Shubha Vivaha</span>
+              </div>
+              <div class="cal-date-cell" data-day="28" onclick="selectCalendarDate(28)" title="28 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">28</span>
+                </div>
+              </div>
+              <div class="cal-date-cell available" data-day="29" onclick="selectCalendarDate(29)" title="Sangeet & Party Slot">
+                <div class="cal-cell-head">
+                  <span class="cal-num">29</span>
+                </div>
+                <span class="cal-tag avail-tag">Sangeet & Party Slot</span>
+              </div>
+              <div class="cal-date-cell" data-day="30" onclick="selectCalendarDate(30)" title="30 November 2026">
+                <div class="cal-cell-head">
+                  <span class="cal-num">30</span>
+                </div>
+              </div>
             </div>
 
             <div class="cal-tap-hint">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-              <span>Tap any date above to view auspicious lagna, choose halls &amp; services on the right.</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Select any auspicious date above to view muhurtham timings, choose halls &amp; services on the right.</span>
             </div>
 
             <div class="cal-custom-inquiry-box">
@@ -204,7 +371,7 @@
         <!-- RIGHT COLUMN: Pop-up Info, Hall & Services Selection, WhatsApp Booking -->
         <div class="cal-right-pane" id="calInfoPanel">
           <div class="cal-info-card">
-            
+
             <!-- Date & Muhurtham Lagna Header -->
             <div class="cal-info-header">
               <div class="cal-info-top-row">
@@ -215,15 +382,15 @@
                 <div class="cal-info-heading-wrap">
                   <div class="cal-info-status-badge" id="selectedDateTypeBadge">✨ Auspicious Muhurtham</div>
                   <h3 class="cal-info-full-date" id="selectedDateFull">Wednesday, 4 November 2026</h3>
-                  <div class="cal-info-event-title" id="selectedDateEventTitle">Karthika Pournami Shubha Muhurtham</div>
+                  <div class="cal-info-event-title" id="selectedDateEventTitle">Karthika Pournami Vivaha Muhurtham</div>
                 </div>
               </div>
 
               <!-- Lagna & Timings Card -->
               <div class="cal-lagna-card" id="selectedDateLagnaCard">
                 <div class="cal-lagna-header">
-                  <span class="cal-lagna-icon">🕉️</span>
-                  <strong>Auspicious Lagna &amp; Timings</strong>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  <strong>Auspicious Timings &amp; Lagna Windows</strong>
                 </div>
                 <p class="cal-lagna-text" id="selectedDateLagnaText">Morning Dhanur Lagna (05:45 AM – 08:15 AM) · Twilight Kumbha Lagna (06:45 PM – 09:15 PM)</p>
                 <div class="cal-lagna-footer">
@@ -514,7 +681,7 @@
         <p>Visakhapatnam's premier coastal destination for weddings, receptions and corporate gatherings.</p>
       </div>
       <div class="footer-grid">
-        <div><h4 class="footer-heading">Explore</h4><div class="footer-links"><a href="gallery.html">Photo Gallery</a><a href="venues.html">Venue Spaces</a><a href="decor.html">Wedding Decor</a><a href="floorplan.html">Floor Plans</a><a href="catering.html">Feast Builder</a><a href="calendar.html">Muhurtham Dates</a><a href="calculator.html">Instant Cost Quote</a></div></div>
+        <div><h4 class="footer-heading">Explore</h4><div class="footer-links"><a href="index.html#gallery">Photo Gallery</a><a href="venues.html">Venue Spaces</a><a href="decor.html">Wedding Decor</a><a href="floorplan.html">Floor Plans</a><a href="catering.html">Feast Builder</a><a href="calendar.html">Muhurtham Dates</a><a href="calculator.html">Instant Cost Quote</a></div></div>
         <div><h4 class="footer-heading">Occasions</h4><div class="footer-links">
           <a href="contact.html">Weddings</a><a href="contact.html">Receptions</a><a href="contact.html">Corporate Summits</a><a href="contact.html">Sangeet Celebrations</a><a href="contact.html">Cultural Festivals</a></div></div>
         <div><h4 class="footer-heading">Contact &amp; Location</h4>
@@ -641,6 +808,6 @@
   </div>
 
   
-  <script src="assets/js/main.js?v=4"></script>
+  <script src="assets/js/main.js?v=5"></script>
 </body>
 </html>

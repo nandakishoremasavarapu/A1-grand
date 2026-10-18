@@ -4,17 +4,22 @@
  * Featuring vivid colorful original photography and Italian typography
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-  // The site is now split across several pages, so each module runs on its own
-  // and a missing section on one page can never stop the others.
+function initA1App() {
+  // The site is split across several pages, each module runs independently
   [
-    initIntroAnimation, initHeroShowcase, initNavbar, initGallery, initLightbox, initPhotoUploader,
+    initIntroAnimation, initHeroShowcase, initNavbar, initGallery, initLightbox, initHomeGalleryFlow, initPhotoUploader,
     initSpaceTabs, initFloorplanVisualizer, initFloorplanExploreSlider, initHallWiseFloorplans, initCateringBuilder, initMuhurthamCalendar,
     initDecorThemes, initBrochureModal, initCalculator, initInquiryForm
   ].forEach((fn) => {
-    try { if (typeof fn === 'function') fn(); } catch (err) { console.warn(fn.name + ' skipped:', err.message); }
+    try { if (typeof fn === 'function') fn(); } catch (err) { console.warn((fn.name || 'module') + ' skipped:', err.message); }
   });
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initA1App);
+} else {
+  initA1App();
+}
 
 /* ==========================================================================
    1. Interactive Real Venue Showcase Carousel (Hero Section)
@@ -39,26 +44,26 @@ const heroVenueSlides = [
     idx: 1,
     pill: "Gourmet Live Spread",
     title: "Gourmet Live Spread & Banqueting",
-    subtitle: "Live Cooking Stations & Multi-Cuisine Feast Spread",
-    imgSrc: "assets/images/gourmet_live_spread_1792227989164.jpg",
+    subtitle: "Authentic AC Banquet Dining Hall with Round Table Setups",
+    imgSrc: "assets/images/banquet_dining_authentic.jpg",
     galleryIdx: 4,
     specs: [
       { label: "Dining Capacity", val: "800+ Seated" },
-      { label: "Cuisine Style", val: "Veg & Non-Veg" },
-      { label: "Kitchens", val: "Dedicated Segregated" }
+      { label: "Layout", val: "Round Tables" },
+      { label: "Kitchens", val: "Dedicated Dual" }
     ]
   },
   {
     idx: 2,
-    pill: "Enchanted Outdoor Lawn",
-    title: "Enchanted Outdoor Lawn at Dusk",
-    subtitle: "Fairy-Lit Coastal Lawn with Gentle Sea Breeze",
-    imgSrc: "assets/images/outdoor_lawn_evening_1792227047846.jpg",
-    galleryIdx: 5,
+    pill: "VIP Bridal Suite",
+    title: "Luxury Presidential Bridal Suite",
+    subtitle: "Authentic AC Bedroom Suite with Double Bed & Dressing Comfort",
+    imgSrc: "assets/images/bridal_suite_authentic.jpg",
+    galleryIdx: 6,
     specs: [
-      { label: "Lawn Area", val: "18,000 Sq.Ft" },
-      { label: "Capacity", val: "1,500+ Guests" },
-      { label: "Setting", val: "Starry Sky & Lawn" }
+      { label: "Suites", val: "4 Private AC Rooms" },
+      { label: "Bed Setup", val: "Double Bed & Linens" },
+      { label: "Amenities", val: "Attached Bath & TV" }
     ]
   },
   {
@@ -216,10 +221,10 @@ const defaultGalleryData = [
     title: "Grand Entrance Portico & Facade",
     category: "ballroom",
     categoryLabel: "Exterior Architecture",
-    isAuthentic: false,
-    imgSrc: "assets/images/grand_entrance_portico_1792227612220.jpg",
-    caption: "Majestic Neoclassical entrance with illuminated portico, valet arrival concourse, and architectural lighting.",
-    specs: "Rushikonda Beach Road | Valet Concourse"
+    isAuthentic: true,
+    imgSrc: "assets/images/grand_entrance_portico_authentic.jpg",
+    caption: "Authentic Grand Entrance Portico of A1 Grand featuring towering wood-paneled pillars, coffered canopy ceiling, decorated wedding arrival walkway with floral rangoli and red carpet runner, and modern glass facade.",
+    specs: "Rushikonda Beach Road | 400+ Car Valet Concourse"
   },
   {
     id: 3,
@@ -236,40 +241,20 @@ const defaultGalleryData = [
     title: "Gourmet Live Spread & Banqueting",
     category: "dining",
     categoryLabel: "Culinary & Dining",
-    isAuthentic: false,
-    imgSrc: "assets/images/gourmet_live_spread_1792227989164.jpg",
-    caption: "Live gourmet dining counter presentation featuring artisanal delicacies, chafing stations, and multi-cuisine spreads.",
-    specs: "800+ Seated Dining | Veg & Non-Veg Kitchens"
-  },
-  {
-    id: 5,
-    title: "Enchanted Outdoor Lawn at Dusk",
-    category: "lawn",
-    categoryLabel: "Outdoor Lawn",
-    isAuthentic: false,
-    imgSrc: "assets/images/outdoor_lawn_evening_1792227047846.jpg",
-    caption: "Manicured green lawn with canopy of fairy lights, gentle coastal sea breeze from Rushikonda, and romantic evening ambiance.",
-    specs: "Capacity: 1,500+ | Open Air & Starry Sky"
+    isAuthentic: true,
+    imgSrc: "assets/images/banquet_dining_authentic.jpg",
+    caption: "Authentic view of A1 Grand AC Banquet Dining Hall featuring round banquet table setups with white linens, polished flooring, recessed ceiling lighting, and spacious capacity for 800+ concurrent diners.",
+    specs: "800+ Seated Dining | Central AC | Dedicated Kitchens"
   },
   {
     id: 6,
     title: "Luxury Presidential Bridal Suite",
     category: "suites",
     categoryLabel: "VIP Suites",
-    isAuthentic: false,
-    imgSrc: "assets/images/luxury_bridal_suite_1792227198649.jpg",
-    caption: "Lavish dressing room with illuminated Hollywood vanity mirror, plush seating, and private en-suite restroom.",
-    specs: "Private AC Suites | Dedicated Groom & Bridal Lounges"
-  },
-  {
-    id: 7,
-    title: "Grand Banquet Dining Hall",
-    category: "dining",
-    categoryLabel: "Dining Hall",
-    isAuthentic: false,
-    imgSrc: "assets/images/grand_banquet_dining_1792227102798.jpg",
-    caption: "Spacious dedicated dining hall facilitating concurrent service of multi-course feasts with smooth guest flow.",
-    specs: "Hygienic Modern Kitchens | Dual Dining Halls"
+    isAuthentic: true,
+    imgSrc: "assets/images/bridal_suite_authentic.jpg",
+    caption: "Authentic view of A1 Grand Luxury Presidential Bridal & Guest Suite featuring double bed with crisp white linens, wooden headboard, split air conditioning, modern furnishings, and private en-suite restroom.",
+    specs: "Verified A1 Grand Suite | Private AC Suite | Attached Restroom"
   },
   {
     id: 8,
@@ -410,6 +395,32 @@ window.closeLightbox = function () {
     document.body.style.overflow = '';
   }
 };
+
+/* ==========================================================================
+   Home Page Flowing Slideshow Gallery Engine
+   - Left-to-Right Continuous Animation
+   - Cursor Hover Pauses Flow
+   - Click to Pop Up Photo in HD Lightbox
+   ========================================================================== */
+function initHomeGalleryFlow() {
+  const container = document.getElementById('homeGalleryContainer');
+  const track = document.getElementById('homeGalleryTrack');
+  if (!container || !track) return;
+
+  // Ensure Lightbox handlers are wired up
+  initLightbox();
+
+  const pauseFlow = () => track.classList.add('is-paused');
+  const resumeFlow = () => track.classList.remove('is-paused');
+
+  container.addEventListener('mouseenter', pauseFlow);
+  container.addEventListener('mouseleave', resumeFlow);
+  container.addEventListener('pointerenter', pauseFlow);
+  container.addEventListener('pointerleave', resumeFlow);
+
+  container.addEventListener('touchstart', pauseFlow, { passive: true });
+  container.addEventListener('touchend', resumeFlow, { passive: true });
+}
 
 /* ==========================================================================
    4. User Photo Uploader (Drag & Drop + Persistence)
@@ -630,8 +641,7 @@ const venueHallsData = {
     badge: '800+ Seated Concurrent Dining',
     subtitle: 'Dual Pure-Veg & Non-Veg Commercial Kitchens · Central AC',
     gallery: [
-      { src: 'assets/images/grand_banquet_dining_1792227102798.jpg', caption: 'Spacious Banquet Dining Hall with Twin Buffet Tracks' },
-      { src: 'assets/images/gourmet_live_spread_1792227989164.jpg', caption: 'Gourmet Live Spread & Chef Cooking Stations' }
+      { src: 'assets/images/banquet_dining_authentic.jpg', caption: 'Authentic AC Banquet Dining Hall with Round Table Setups' }
     ],
     overview: 'A dedicated, fully air-conditioned banquet dining pavilion designed for fast, hygienic, and dignified guest service. Engineered with three oversized 16-foot acoustic portal doors connecting to the main hall, it completely segregates culinary aromas while maintaining a lightning-fast flow rate of 400 guests per minute.',
     specs: [
@@ -662,7 +672,7 @@ const venueHallsData = {
     badge: '4 Private Luxury AC Suites',
     subtitle: 'Direct Backstage Access · Dedicated Bride & Groom Green Rooms',
     gallery: [
-      { src: 'assets/images/luxury_bridal_suite_1792227198649.jpg', caption: 'VIP Suite with Hollywood Vanity Mirror & Private Restroom' }
+      { src: 'assets/images/bridal_suite_authentic.jpg', caption: 'Authentic VIP Presidential Bridal Bedroom Suite with Double Bed & Split AC' }
     ],
     overview: 'Four luxurious, fully air-conditioned green rooms located directly behind the main stage. Offering absolute privacy for the bride, groom, and immediate families, each suite features illuminated theatrical makeup vanity mirrors, plush seating, attached western bathrooms, and lockable security cabinets for jewelry and attire.',
     specs: [
@@ -693,18 +703,18 @@ const venueHallsData = {
     badge: 'Arrival Concourse & Valet',
     subtitle: '400+ Car Paved Parking · Covered Valet Concourse',
     gallery: [
-      { src: 'assets/images/grand_entrance_portico_1792227612220.jpg', caption: 'Majestic Neoclassical Portico & Illumination at Night' }
+      { src: 'assets/images/grand_entrance_portico_authentic.jpg', caption: 'Authentic Grand Entrance Portico & Decorated Welcome Walkway' }
     ],
-    overview: 'A grand statement of luxury the moment guests arrive. Inspired by classic Neoclassical architecture with towering colonnades and warm ambient uplighting, the entrance features a wide covered portico for seamless drive-up drop-offs and a paved 400+ vehicle parking concourse staffed by professional valet personnel.',
+    overview: 'A grand statement of luxury the moment guests arrive at A1 Grand The Convention. Featuring towering wood-finished pillars, coffered canopy ceiling, festive floral entrance decor with rangoli runner, covered drive-through portico for seamless drop-offs, and a 400+ vehicle paved parking concourse staffed by professional valet personnel.',
     specs: [
       { label: 'Parking Capacity', val: '400+ Four-Wheelers & 300+ Two-Wheelers' },
       { label: 'Valet Service', val: 'Covered Portico with Uniformed Valet Drivers' },
-      { label: 'Architecture', val: 'Italian Neoclassical Colonnaded Archways' },
+      { label: 'Architecture', val: 'Wood-Paneled Pillars & Coffered Canopy Portico' },
+      { label: 'Decor Setup', val: 'Festive Parasols, Marigold Garlands & Floral Rangoli' },
       { label: 'Accessibility', val: 'Full Ramp Access for Wheelchairs & Elderly' },
       { label: 'Security', val: '24/7 CCTV Surveillance & Uniformed Guards' },
       { label: 'Location', val: 'Beach Road, Beside Saipriya Resorts, Rushikonda' },
-      { label: 'Entry Width', val: '40ft Wide Grand Gates for VIP Convoys' },
-      { label: 'Lighting', val: 'Architectural Facade Uplighting & Warm Lanterns' }
+      { label: 'Entry Width', val: '40ft Wide Grand Gates for VIP Convoys' }
     ],
     amenities: [
       'Covered drop-off portico keeping guests shielded from sun or seasonal rain',
@@ -1054,13 +1064,55 @@ const muhurthamMonths = [
     days: 30,
     startDayOfWeek: 0,
     dates: {
-      4: { type: 'muhurtham', label: 'Karthika Pournami', status: 'Fast Filling', lagna: 'Morning Dhanur Lagna (05:45 AM – 08:15 AM) · Twilight Kumbha Lagna (06:45 PM – 09:15 PM)', notes: 'Prime Karthika Pournami vivaha muhurtham. Supreme auspicious alignment for weddings.' },
-      8: { type: 'muhurtham', label: 'Shubha Muhurtham', status: 'Limited Slots', lagna: 'Mesha Lagna (09:15 AM – 11:30 AM)', notes: 'Auspicious marriage lagna with favorable nakshatra and guru drishti.' },
-      14: { type: 'available', label: 'Prime Weekend', status: 'Available', lagna: 'Morning (06:00 AM – 01:00 PM) · Evening (04:00 PM – 11:00 PM)', notes: 'Prime Saturday slot available for wedding receptions, sangeet, or engagement gala.' },
-      19: { type: 'muhurtham', label: 'Grand Vivaha Muhurtham', status: 'Fast Filling', lagna: 'Vrischika Lagna (07:15 AM – 09:30 AM) · Godhuli Lagna (05:45 PM – 07:30 PM)', notes: 'Highly sought-after marriage muhurtham date. High booking demand.' },
-      22: { type: 'available', label: 'Sunday Reception', status: 'Available', lagna: 'Full Day / Evening Slot Options', notes: 'Sunday banquet slot open. Ideal for royal coastal lawn cocktail or wedding reception.' },
-      27: { type: 'muhurtham', label: 'Magha Shubha Lagna', status: 'Limited Slots', lagna: 'Mithuna Lagna (08:30 AM – 10:45 AM)', notes: 'Auspicious pre-winter marriage muhurtham. 1 indoor hall slot open.' },
-      29: { type: 'available', label: 'Sangeet & Party Slot', status: 'Available', lagna: 'Evening / Twilight Slot (04:00 PM – 11:30 PM)', notes: 'Perfect Sunday for grand sangeet, mehendi or corporate celebration.' }
+      4: { 
+        type: 'muhurtham', 
+        label: 'Karthika Pournami', 
+        status: 'Fast Filling', 
+        lagna: 'Morning Dhanur Lagna (05:45 AM – 08:15 AM) · Twilight Kumbha Lagna (06:45 PM – 09:15 PM)', 
+        notes: 'Prime Karthika Pournami vivaha muhurtham. Supreme auspicious alignment for weddings.' 
+      },
+      8: { 
+        type: 'muhurtham', 
+        label: 'Vivaha Muhurtham', 
+        status: 'Limited Slots', 
+        lagna: 'Morning Mesha Lagna (09:15 AM – 11:30 AM) · Evening Vrishabha Lagna (07:00 PM – 09:00 PM)', 
+        notes: 'Auspicious marriage lagna with favorable astral alignment.' 
+      },
+      14: { 
+        type: 'available', 
+        label: 'Prime Weekend', 
+        status: 'Available', 
+        lagna: 'Morning & Evening Slots Open (06:00 AM – 11:00 PM)', 
+        notes: 'Prime Saturday slot available for wedding receptions, sangeet, or engagement gala.' 
+      },
+      19: { 
+        type: 'muhurtham', 
+        label: 'Grand Vivaha Lagna', 
+        status: 'Fast Filling', 
+        lagna: 'Morning Vrischika Lagna (07:15 AM – 09:30 AM) · Godhuli Twilight Lagna (05:45 PM – 07:30 PM)', 
+        notes: 'Highly auspicious vivaha muhurtham with high reservation demand.' 
+      },
+      22: { 
+        type: 'available', 
+        label: 'Sunday Reception', 
+        status: 'Available', 
+        lagna: 'Full Day / Evening Slot Options Available', 
+        notes: 'Sunday banquet slot open. Ideal for royal coastal lawn cocktail or wedding reception.' 
+      },
+      27: { 
+        type: 'muhurtham', 
+        label: 'Shubha Vivaha', 
+        status: 'Limited Slots', 
+        lagna: 'Mithuna Lagna (08:30 AM – 10:45 AM) · Simha Lagna (06:15 PM – 08:30 PM)', 
+        notes: 'Auspicious pre-winter marriage muhurtham. 1 indoor convention slot remaining.' 
+      },
+      29: { 
+        type: 'available', 
+        label: 'Sangeet & Party Slot', 
+        status: 'Available', 
+        lagna: 'Evening / Twilight Slot (04:00 PM – 11:30 PM)', 
+        notes: 'Perfect Sunday for grand sangeet, mehendi or reception celebration.' 
+      }
     }
   },
   {
@@ -1071,12 +1123,48 @@ const muhurthamMonths = [
     days: 31,
     startDayOfWeek: 2,
     dates: {
-      3: { type: 'muhurtham', label: 'Margashira Muhurtham', status: 'Fast Filling', lagna: 'Makara Lagna (07:30 AM – 09:45 AM)', notes: 'Auspicious Margashira wedding date with high demand.' },
-      6: { type: 'muhurtham', label: 'Shubha Lagna', status: 'Limited Slots', lagna: 'Kumbha Lagna (08:15 AM – 10:30 AM)', notes: 'Sacred wedding alignment. Ideal for traditional mandapam celebrations.' },
-      12: { type: 'available', label: 'Sunday Prime Weekend', status: 'Available', lagna: 'Morning & Evening Slots Open', notes: 'Prime coastal winter weekend date for wedding receptions and parties.' },
-      18: { type: 'muhurtham', label: 'Winter Wedding', status: 'Fast Filling', lagna: 'Dhanur Lagna (06:30 AM – 08:45 AM)', notes: 'Peak coastal winter wedding season. Reserve early to lock your hall.' },
-      24: { type: 'available', label: 'Holiday Gala', status: 'Available', lagna: 'Full Day Exclusive Availability', notes: 'Holiday celebration slot ideal for grand corporate summits or destination weddings.' },
-      31: { type: 'filling', label: 'New Year Eve', status: 'Limited Slots', lagna: 'Evening Coastal Gala (05:00 PM – Late)', notes: 'Special New Year Eve celebration slot with seaside lawn & live counters.' }
+      3: { 
+        type: 'muhurtham', 
+        label: 'Margashira Muhurtham', 
+        status: 'Fast Filling', 
+        lagna: 'Makara Lagna (07:30 AM – 09:45 AM) · Kumbha Lagna (06:00 PM – 08:15 PM)', 
+        notes: 'Sacred Margashira wedding date. Coastal winter favorite.' 
+      },
+      6: { 
+        type: 'muhurtham', 
+        label: 'Auspicious Lagna', 
+        status: 'Limited Slots', 
+        lagna: 'Kumbha Lagna (08:15 AM – 10:30 AM) · Mesha Lagna (07:00 PM – 09:15 PM)', 
+        notes: 'Sacred wedding alignment. Ideal for traditional mandapam celebrations.' 
+      },
+      12: { 
+        type: 'available', 
+        label: 'Saturday Prime Slot', 
+        status: 'Available', 
+        lagna: 'Morning & Evening Slots Available', 
+        notes: 'Prime coastal winter weekend date for wedding receptions and banquets.' 
+      },
+      18: { 
+        type: 'muhurtham', 
+        label: 'Winter Wedding Lagna', 
+        status: 'Fast Filling', 
+        lagna: 'Dhanur Lagna (06:30 AM – 08:45 AM) · Meena Lagna (05:45 PM – 08:00 PM)', 
+        notes: 'Peak coastal winter wedding season. Reserve early to lock your hall.' 
+      },
+      24: { 
+        type: 'available', 
+        label: 'Holiday Gala Slot', 
+        status: 'Available', 
+        lagna: 'Full Day Exclusive Availability', 
+        notes: 'Holiday celebration slot ideal for destination weddings & banquets.' 
+      },
+      31: { 
+        type: 'filling', 
+        label: 'New Year Eve Gala', 
+        status: 'Limited Slots', 
+        lagna: 'Evening Coastal Gala (05:00 PM onwards)', 
+        notes: 'Special New Year Eve celebration slot with seaside lawn & live counters.' 
+      }
     }
   },
   {
@@ -1087,10 +1175,34 @@ const muhurthamMonths = [
     days: 31,
     startDayOfWeek: 5,
     dates: {
-      14: { type: 'muhurtham', label: 'Sankranti Muhurtham', status: 'Fast Filling', lagna: 'Makara Sankranti Lagna (08:00 AM – 10:30 AM)', notes: 'Makara Sankranti sacred harvest wedding muhurtham with immense spiritual significance.' },
-      17: { type: 'muhurtham', label: 'Marriage Lagna', status: 'Limited Slots', lagna: 'Meena Lagna (09:15 AM – 11:30 AM)', notes: 'Prime post-Sankranti wedding lagna. High booking interest.' },
-      23: { type: 'available', label: 'Prime Weekend Slot', status: 'Available', lagna: 'Morning / Evening Availability', notes: 'Available Saturday for grand receptions or sangeet musical nights.' },
-      28: { type: 'muhurtham', label: 'Magha Shukla Ekadashi', status: 'Fast Filling', lagna: 'Vrishabha Lagna (07:15 AM – 09:45 AM)', notes: 'Bheeshma Ekadashi sacred auspicious muhurtham for wedding celebrations.' }
+      14: { 
+        type: 'muhurtham', 
+        label: 'Sankranti Muhurtham', 
+        status: 'Fast Filling', 
+        lagna: 'Makara Sankranti Lagna (08:00 AM – 10:30 AM) · Vrishabha Lagna (06:30 PM – 08:45 PM)', 
+        notes: 'Makara Sankranti sacred harvest wedding muhurtham with immense traditional significance.' 
+      },
+      17: { 
+        type: 'muhurtham', 
+        label: 'Magha Wedding Lagna', 
+        status: 'Limited Slots', 
+        lagna: 'Meena Lagna (09:15 AM – 11:30 AM) · Mithuna Lagna (07:00 PM – 09:15 PM)', 
+        notes: 'Prime post-Sankranti wedding lagna. High booking interest.' 
+      },
+      23: { 
+        type: 'available', 
+        label: 'Prime Weekend Slot', 
+        status: 'Available', 
+        lagna: 'Morning / Evening Availability', 
+        notes: 'Available Saturday for grand receptions or sangeet musical nights.' 
+      },
+      28: { 
+        type: 'muhurtham', 
+        label: 'Bheeshma Ekadashi', 
+        status: 'Fast Filling', 
+        lagna: 'Vrishabha Lagna (07:15 AM – 09:45 AM) · Karkataka Lagna (06:15 PM – 08:30 PM)', 
+        notes: 'Bheeshma Ekadashi sacred auspicious muhurtham for wedding celebrations.' 
+      }
     }
   },
   {
@@ -1101,11 +1213,41 @@ const muhurthamMonths = [
     days: 28,
     startDayOfWeek: 1,
     dates: {
-      5: { type: 'muhurtham', label: 'Magha Shubha Vivaha', status: 'Fast Filling', lagna: 'Kumbha Lagna (07:15 AM – 09:30 AM)', notes: 'Prime Magha masa marriage date with auspicious nakshatram.' },
-      12: { type: 'muhurtham', label: 'Ratha Saptami Muhurtham', status: 'Limited Slots', lagna: 'Meena Lagna (08:45 AM – 11:00 AM)', notes: 'Surya Ratha Saptami auspicious wedding lagna.' },
-      14: { type: 'muhurtham', label: 'Royal Wedding Lagna', status: 'Fast Filling', lagna: 'Mesha Lagna (09:30 AM – 12:00 PM)', notes: 'Weekend royal wedding slot with open lawn & grand ballroom combo.' },
-      20: { type: 'available', label: 'Weekend Available', status: 'Available', lagna: 'Morning & Evening Slots Open', notes: 'Saturday prime banquet slot for engagements, receptions or parties.' },
-      26: { type: 'muhurtham', label: 'Maha Shivaratri Lagna', status: 'Limited Slots', lagna: 'Vrishabha Lagna (07:00 AM – 09:15 AM)', notes: 'Sacred muhurtham date preceding Maha Shivaratri.' }
+      5: { 
+        type: 'muhurtham', 
+        label: 'Magha Vivaha', 
+        status: 'Fast Filling', 
+        lagna: 'Kumbha Lagna (07:15 AM – 09:30 AM) · Mesha Lagna (06:00 PM – 08:15 PM)', 
+        notes: 'Prime Magha masa marriage date with auspicious nakshatram.' 
+      },
+      12: { 
+        type: 'muhurtham', 
+        label: 'Ratha Saptami Lagna', 
+        status: 'Limited Slots', 
+        lagna: 'Meena Lagna (08:45 AM – 11:00 AM) · Vrishabha Lagna (06:30 PM – 08:45 PM)', 
+        notes: 'Surya Ratha Saptami auspicious wedding lagna.' 
+      },
+      14: { 
+        type: 'muhurtham', 
+        label: 'Royal Wedding Lagna', 
+        status: 'Fast Filling', 
+        lagna: 'Mesha Lagna (09:30 AM – 12:00 PM) · Simha Lagna (07:15 PM – 09:30 PM)', 
+        notes: 'Weekend royal wedding slot with open lawn & grand ballroom combo.' 
+      },
+      20: { 
+        type: 'available', 
+        label: 'Saturday Available', 
+        status: 'Available', 
+        lagna: 'Morning & Evening Slots Open', 
+        notes: 'Saturday prime banquet slot for engagements, receptions or parties.' 
+      },
+      26: { 
+        type: 'muhurtham', 
+        label: 'Shivaratri Eve Lagna', 
+        status: 'Limited Slots', 
+        lagna: 'Vrishabha Lagna (07:00 AM – 09:15 AM) · Karkataka Lagna (05:45 PM – 08:00 PM)', 
+        notes: 'Sacred muhurtham date preceding Maha Shivaratri.' 
+      }
     }
   },
   {
@@ -1116,11 +1258,41 @@ const muhurthamMonths = [
     days: 31,
     startDayOfWeek: 1,
     dates: {
-      7: { type: 'muhurtham', label: 'Phalguna Shukla Ekadashi', status: 'Fast Filling', lagna: 'Mithuna Lagna (08:15 AM – 10:45 AM)', notes: 'Spring Vivaha Muhurtham with favorable astral positioning.' },
-      12: { type: 'muhurtham', label: 'Shubha Lagna', status: 'Limited Slots', lagna: 'Karkataka Lagna (09:00 AM – 11:15 AM)', notes: 'Auspicious marriage day for traditional South Indian rituals.' },
-      18: { type: 'muhurtham', label: 'Ugadi Vivaha Muhurtham', status: 'Fast Filling', lagna: 'Simha Lagna (06:45 AM – 09:00 AM)', notes: 'Telugu New Year season auspicious wedding date.' },
-      21: { type: 'available', label: 'Sunday Prime Weekend', status: 'Available', lagna: 'Morning & Evening Open', notes: 'Sunday open booking slot for grand receptions.' },
-      27: { type: 'muhurtham', label: 'Spring Royal Wedding', status: 'Limited Slots', lagna: 'Kanya Lagna (07:30 AM – 10:00 AM)', notes: 'High season wedding slot.' }
+      7: { 
+        type: 'muhurtham', 
+        label: 'Phalguna Ekadashi', 
+        status: 'Fast Filling', 
+        lagna: 'Mithuna Lagna (08:15 AM – 10:45 AM) · Kanya Lagna (06:30 PM – 08:45 PM)', 
+        notes: 'Spring Vivaha Muhurtham with favorable astral positioning.' 
+      },
+      12: { 
+        type: 'muhurtham', 
+        label: 'Vivaha Muhurtham', 
+        status: 'Limited Slots', 
+        lagna: 'Karkataka Lagna (09:00 AM – 11:15 AM) · Vrischika Lagna (06:45 PM – 09:00 PM)', 
+        notes: 'Auspicious marriage day for traditional South Indian rituals.' 
+      },
+      18: { 
+        type: 'muhurtham', 
+        label: 'Ugadi Vivaha Lagna', 
+        status: 'Fast Filling', 
+        lagna: 'Simha Lagna (06:45 AM – 09:00 AM) · Dhanur Lagna (05:30 PM – 07:45 PM)', 
+        notes: 'Telugu New Year season auspicious wedding date.' 
+      },
+      21: { 
+        type: 'available', 
+        label: 'Sunday Prime Slot', 
+        status: 'Available', 
+        lagna: 'Morning & Evening Open', 
+        notes: 'Sunday open booking slot for grand receptions.' 
+      },
+      27: { 
+        type: 'muhurtham', 
+        label: 'Spring Royal Wedding', 
+        status: 'Limited Slots', 
+        lagna: 'Kanya Lagna (07:30 AM – 10:00 AM) · Makara Lagna (06:15 PM – 08:30 PM)', 
+        notes: 'High season spring wedding slot.' 
+      }
     }
   },
   {
@@ -1131,11 +1303,41 @@ const muhurthamMonths = [
     days: 30,
     startDayOfWeek: 4,
     dates: {
-      4: { type: 'muhurtham', label: 'Chaitra Vivaha Muhurtham', status: 'Fast Filling', lagna: 'Vrischika Lagna (06:30 AM – 08:45 AM)', notes: 'Auspicious Chaitra masa wedding date.' },
-      14: { type: 'muhurtham', label: 'Sita Rama Kalyanam', status: 'Fast Filling', lagna: 'Dhanur Lagna (07:15 AM – 09:30 AM)', notes: 'Most sacred divine wedding day. Inquiries heavily prioritized.' },
-      18: { type: 'available', label: 'Prime Weekend Slot', status: 'Available', lagna: 'Full Day / Evening', notes: 'Prime weekend available for wedding banquet or reception.' },
-      22: { type: 'muhurtham', label: 'Shubha Muhurtham', status: 'Limited Slots', lagna: 'Makara Lagna (08:00 AM – 10:15 AM)', notes: 'Auspicious marriage lagna.' },
-      29: { type: 'muhurtham', label: 'Akshaya Tritiya Vivaha', status: 'Fast Filling', lagna: 'Kumbha Lagna (06:00 AM – 08:30 AM)', notes: 'Akshaya Tritiya eternal fortune marriage muhurtham. Fastest filling date.' }
+      4: { 
+        type: 'muhurtham', 
+        label: 'Chaitra Vivaha', 
+        status: 'Fast Filling', 
+        lagna: 'Vrischika Lagna (06:30 AM – 08:45 AM) · Meena Lagna (06:00 PM – 08:15 PM)', 
+        notes: 'Auspicious Chaitra masa wedding date.' 
+      },
+      14: { 
+        type: 'muhurtham', 
+        label: 'Sita Rama Kalyanam', 
+        status: 'Fast Filling', 
+        lagna: 'Dhanur Lagna (07:15 AM – 09:30 AM) · Mesha Lagna (06:45 PM – 09:00 PM)', 
+        notes: 'Divine wedding day. Inquiries heavily prioritized.' 
+      },
+      18: { 
+        type: 'available', 
+        label: 'Prime Weekend Slot', 
+        status: 'Available', 
+        lagna: 'Full Day / Evening Availability', 
+        notes: 'Prime weekend available for wedding banquet or reception.' 
+      },
+      22: { 
+        type: 'muhurtham', 
+        label: 'Vaisakha Muhurtham', 
+        status: 'Limited Slots', 
+        lagna: 'Makara Lagna (08:00 AM – 10:15 AM) · Vrishabha Lagna (07:00 PM – 09:15 PM)', 
+        notes: 'Auspicious marriage lagna.' 
+      },
+      29: { 
+        type: 'muhurtham', 
+        label: 'Akshaya Tritiya Vivaha', 
+        status: 'Fast Filling', 
+        lagna: 'Kumbha Lagna (06:00 AM – 08:30 AM) · Simha Lagna (06:30 PM – 08:45 PM)', 
+        notes: 'Akshaya Tritiya eternal fortune marriage muhurtham. Fastest filling date.' 
+      }
     }
   },
   {
@@ -1146,11 +1348,41 @@ const muhurthamMonths = [
     days: 31,
     startDayOfWeek: 6,
     dates: {
-      2: { type: 'muhurtham', label: 'Vaisakha Shubha Lagna', status: 'Fast Filling', lagna: 'Meena Lagna (07:00 AM – 09:15 AM)', notes: 'Prime Vaisakha summer marriage muhurtham with central AC comfort.' },
-      9: { type: 'available', label: 'Summer Prime Weekend', status: 'Available', lagna: 'Evening Reception Slot', notes: 'Ideal for twilight lawn party and banquet dinner.' },
-      14: { type: 'muhurtham', label: 'Ganga Saptami Muhurtham', status: 'Fast Filling', lagna: 'Mesha Lagna (08:15 AM – 10:30 AM)', notes: 'Auspicious summer marriage date.' },
-      20: { type: 'muhurtham', label: 'Vaisakha Pournami', status: 'Fast Filling', lagna: 'Vrishabha Lagna (06:45 AM – 09:00 AM)', notes: 'Full moon auspicious wedding celebration.' },
-      28: { type: 'muhurtham', label: 'Shubha Lagna', status: 'Limited Slots', lagna: 'Mithuna Lagna (07:30 AM – 09:45 AM)', notes: 'Limited slot remaining for indoor convention.' }
+      2: { 
+        type: 'muhurtham', 
+        label: 'Vaisakha Shubha Lagna', 
+        status: 'Fast Filling', 
+        lagna: 'Meena Lagna (07:00 AM – 09:15 AM) · Kanya Lagna (06:00 PM – 08:15 PM)', 
+        notes: 'Prime Vaisakha summer marriage muhurtham with central AC comfort.' 
+      },
+      9: { 
+        type: 'available', 
+        label: 'Summer Prime Weekend', 
+        status: 'Available', 
+        lagna: 'Evening Reception Slot Open', 
+        notes: 'Ideal for twilight lawn party and banquet dinner.' 
+      },
+      14: { 
+        type: 'muhurtham', 
+        label: 'Ganga Saptami Muhurtham', 
+        status: 'Fast Filling', 
+        lagna: 'Mesha Lagna (08:15 AM – 10:30 AM) · Tula Lagna (06:45 PM – 09:00 PM)', 
+        notes: 'Auspicious summer marriage date.' 
+      },
+      20: { 
+        type: 'muhurtham', 
+        label: 'Vaisakha Pournami', 
+        status: 'Fast Filling', 
+        lagna: 'Vrishabha Lagna (06:45 AM – 09:00 AM) · Vrischika Lagna (06:15 PM – 08:30 PM)', 
+        notes: 'Full moon auspicious wedding celebration.' 
+      },
+      28: { 
+        type: 'muhurtham', 
+        label: 'Vivaha Muhurtham', 
+        status: 'Limited Slots', 
+        lagna: 'Mithuna Lagna (07:30 AM – 09:45 AM) · Dhanur Lagna (06:00 PM – 08:15 PM)', 
+        notes: 'Limited slot remaining for indoor convention.' 
+      }
     }
   }
 ];
@@ -1258,9 +1490,10 @@ function renderCalendar() {
     const selectedClass = isSelected ? ' selected' : '';
 
     html += `
-      <div class="cal-date-cell ${cellClass}${selectedClass}" data-day="${d}" onclick="selectCalendarDate(${d})">
+      <div class="cal-date-cell ${cellClass}${selectedClass}" data-day="${d}" onclick="selectCalendarDate(${d})" title="${info ? info.label : d + ' ' + current.name}">
         <div class="cal-cell-head">
           <span class="cal-num">${d}</span>
+          ${info && info.type === 'muhurtham' ? '<span class="cal-muhurtham-dot" title="Auspicious Muhurtham"></span>' : ''}
           ${isSelected ? '<span class="cal-active-dot"></span>' : ''}
         </div>
         ${tagHtml}
@@ -1313,7 +1546,7 @@ function updateRightInfoPanel(day, monthIdx) {
   const isWeekend = weekday === 'Saturday' || weekday === 'Sunday';
   const info = current.dates[day];
 
-  // 1. Date Header Elements
+  // Date Header Elements
   const dayElem = document.getElementById('selectedDateDay');
   const monthElem = document.getElementById('selectedDateMonth');
   const fullElem = document.getElementById('selectedDateFull');
@@ -1368,7 +1601,6 @@ function initCalendarInteractionListeners() {
   const serviceCards = document.querySelectorAll('.cal-service-card');
   serviceCards.forEach(card => {
     card.addEventListener('click', (e) => {
-      // Avoid double toggling if direct input click
       const chk = card.querySelector('input[type="checkbox"]');
       if (e.target !== chk) {
         chk.checked = !chk.checked;
@@ -1449,13 +1681,13 @@ window.bookMuhurthamOnWhatsApp = function () {
 
   const waMessage = 
 `Hello A1 Grand The Convention! 🌸
-I would like to inquire about booking an auspicious date for our celebration:
+I would like to inquire about booking an auspicious wedding date:
 
 📅 Date: ${fullDateStr}
 ✨ Muhurtham / Occasion: ${muhurthamTitle}
-🕉️ Lagna & Timings: ${lagnaInfo}
+⏰ Auspicious Lagna & Timings: ${lagnaInfo}
 🏛️ Selected Venue / Hall: ${selectedHall}
-⏰ Preferred Time Slot: ${selectedSlot}
+⏱️ Preferred Time Slot: ${selectedSlot}
 👥 Expected Guest Attendance: ${selectedGuests}
 
 🛎️ Selected Services Provided by A1 Grand:

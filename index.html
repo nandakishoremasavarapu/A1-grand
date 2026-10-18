@@ -124,7 +124,7 @@
       </div>
       <nav class="nav-menu" id="navMenu" aria-label="Main">
         <a href="index.html" class="nav-link active" aria-current="page">Home</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
+        
         <a href="venues.html" class="nav-link">Venues</a>
         <a href="decor.html" class="nav-link">Decor</a>
         <a href="floorplan.html" class="nav-link">Floor Plans</a>
@@ -163,7 +163,7 @@
           </p>
 
           <div class="hero-cta-group">
-            <a href="gallery.html" class="btn btn-gold">
+            <a href="#gallery" class="btn btn-gold">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
               View Original Photos
             </a>
@@ -210,7 +210,7 @@
             <div class="hero-venue-tabs" id="heroVenueTabs">
               <button class="hero-tab-pill active" data-idx="0">1: Royal Mandap</button>
               <button class="hero-tab-pill" data-idx="1">2: Gourmet Spread</button>
-              <button class="hero-tab-pill" data-idx="2">3: Outdoor Lawn</button>
+              <button class="hero-tab-pill" data-idx="2">3: Bridal Suite</button>
               <button class="hero-tab-pill" data-idx="3">4: Main Hall</button>
             </div>
 
@@ -249,6 +249,286 @@
     </div>
   </section>
 
+
+  <!-- Home Page Continuous Flowing Slideshow Gallery Section -->
+  <section class="home-gallery-section" id="gallery">
+    <div class="container">
+      <div class="home-gallery-controls-row">
+        <div class="home-gallery-header-left">
+          <span class="section-label">Authentic Visual Showcase</span>
+          <h2 class="section-title">Gallery</h2>
+          <p class="section-subtitle">Real verified venue photographs of A1 Grand Convention Hall, Mandapam, Suites &amp; Dining. Hover cursor to pause the flow · Tap any photo to inspect in full HD.</p>
+        </div>
+        <div class="home-gallery-hint">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          <span>Hover to pause · Click photo to pop up</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Infinite Continuous Slideshow Moving Left-to-Right -->
+    <div class="home-gallery-marquee-wrap" id="homeGalleryContainer">
+      <div class="home-gallery-flow-track" id="homeGalleryTrack">
+        <div class="home-flow-card" onclick="openLightboxByIndex(1)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/real_convention_hall_hd.jpg" alt="Main Convention Hall Interior" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">Convention Hall</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Main Convention Hall Interior</h4>
+            <p class="home-flow-desc">Authentic view featuring coffered acoustic ceiling, reflective Italian flooring, and banquet seating setup.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(2)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/grand_entrance_portico_authentic.jpg" alt="Grand Entrance Portico & Facade" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">Portico & Driveway</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Grand Entrance Portico & Facade</h4>
+            <p class="home-flow-desc">Towering wood-paneled pillars, covered arrival canopy, red carpet walkway, and modern glass facade.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(3)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/real_wedding_mandap_authentic.jpg?v=3" alt="Royal Wedding Mandap & Stage" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">Wedding Mandap</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Royal Wedding Mandap & Stage</h4>
+            <p class="home-flow-desc">Authentic floral canopy pillars, crystal chandeliers, red velvet bridal seating, and stage illumination.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(4)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/banquet_dining_authentic.jpg" alt="Gourmet Live Spread & Banqueting" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">Dining Pavilion</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Gourmet Live Spread & Banqueting</h4>
+            <p class="home-flow-desc">Authentic AC banquet dining pavilion with round table setups, crisp linens, and 800+ dining capacity.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(6)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/bridal_suite_authentic.jpg" alt="Luxury Presidential Bridal Suite" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">VIP Bridal Suite</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Luxury Presidential Bridal Suite</h4>
+            <p class="home-flow-desc">Authentic air-conditioned bridal bedroom suite with double bed, attached private bath, and dressing amenities.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(8)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/floorplan_theater_seating_layout.jpg" alt="Main Hall Theater Seating Layout" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">Seating Layout</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Main Hall Theater Seating Layout</h4>
+            <p class="home-flow-desc">1,500 seated banquet layout with wide central procession aisle and pillar-free sightlines.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(9)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/floorplan_wide_perspective_hall.jpg" alt="Grand Stage & Hall Perspective" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">Stage & Architecture</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Grand Stage & Hall Perspective</h4>
+            <p class="home-flow-desc">Wide-angle perspective of the 60ft elevated stage and unobstructed 2,500-capacity convention hall.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(10)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/floorplan_stage_mandap_authentic.jpg" alt="Authentic Kalyana Mandapam Stage" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">Stage Decor</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Authentic Kalyana Mandapam Stage</h4>
+            <p class="home-flow-desc">Real wedding mandapam with tiered floral stage steps, royal settee, and traditional rangoli carpet.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(1)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/real_convention_hall_hd.jpg" alt="Main Convention Hall Interior" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">Convention Hall</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Main Convention Hall Interior</h4>
+            <p class="home-flow-desc">Authentic view featuring coffered acoustic ceiling, reflective Italian flooring, and banquet seating setup.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(2)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/grand_entrance_portico_authentic.jpg" alt="Grand Entrance Portico & Facade" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">Portico & Driveway</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Grand Entrance Portico & Facade</h4>
+            <p class="home-flow-desc">Towering wood-paneled pillars, covered arrival canopy, red carpet walkway, and modern glass facade.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(3)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/real_wedding_mandap_authentic.jpg?v=3" alt="Royal Wedding Mandap & Stage" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">Wedding Mandap</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Royal Wedding Mandap & Stage</h4>
+            <p class="home-flow-desc">Authentic floral canopy pillars, crystal chandeliers, red velvet bridal seating, and stage illumination.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(4)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/banquet_dining_authentic.jpg" alt="Gourmet Live Spread & Banqueting" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">Dining Pavilion</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Gourmet Live Spread & Banqueting</h4>
+            <p class="home-flow-desc">Authentic AC banquet dining pavilion with round table setups, crisp linens, and 800+ dining capacity.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(6)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/bridal_suite_authentic.jpg" alt="Luxury Presidential Bridal Suite" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">VIP Bridal Suite</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Luxury Presidential Bridal Suite</h4>
+            <p class="home-flow-desc">Authentic air-conditioned bridal bedroom suite with double bed, attached private bath, and dressing amenities.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(8)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/floorplan_theater_seating_layout.jpg" alt="Main Hall Theater Seating Layout" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">Seating Layout</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Main Hall Theater Seating Layout</h4>
+            <p class="home-flow-desc">1,500 seated banquet layout with wide central procession aisle and pillar-free sightlines.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(9)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/floorplan_wide_perspective_hall.jpg" alt="Grand Stage & Hall Perspective" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">Stage & Architecture</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Grand Stage & Hall Perspective</h4>
+            <p class="home-flow-desc">Wide-angle perspective of the 60ft elevated stage and unobstructed 2,500-capacity convention hall.</p>
+          </div>
+        </div>
+        <div class="home-flow-card" onclick="openLightboxByIndex(10)" title="Click to view enlarged photo">
+          <div class="home-flow-img-box">
+            <img src="assets/images/floorplan_stage_mandap_authentic.jpg" alt="Authentic Kalyana Mandapam Stage" loading="lazy">
+            <div class="home-flow-badge-strip">
+              <span class="home-flow-badge badge-authentic">Original Venue Photo</span>
+              <span class="home-flow-badge">Stage Decor</span>
+            </div>
+            <div class="home-flow-zoom-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+            </div>
+          </div>
+          <div class="home-flow-content">
+            <h4 class="home-flow-title">Authentic Kalyana Mandapam Stage</h4>
+            <p class="home-flow-desc">Real wedding mandapam with tiered floral stage steps, royal settee, and traditional rangoli carpet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="explore-section" id="explore">
     <div class="container">
       <div class="section-head text-center">
@@ -256,7 +536,7 @@
         <p class="section-subtitle mx-auto">Each part of the venue has its own page. Start anywhere.</p>
       </div>
       <div class="explore-grid">
-        <a class="explore-card" href="gallery.html">
+        <a class="explore-card" href="#gallery">
           <span class="explore-img" style="background-image:url('assets/images/real_convention_hall_hd.jpg')"></span>
           <span class="explore-body">
             <strong>Gallery</strong>
@@ -265,7 +545,7 @@
         </a>
 
         <a class="explore-card" href="venues.html">
-          <span class="explore-img" style="background-image:url('assets/images/grand_entrance_portico_1792227612220.jpg')"></span>
+          <span class="explore-img" style="background-image:url('assets/images/grand_entrance_portico_authentic.jpg')"></span>
           <span class="explore-body">
             <strong>Venues</strong>
             <span>Ballroom, banquet halls, lawns and suites</span>
@@ -301,7 +581,7 @@
         </a>
 
         <a class="explore-card" href="catering.html">
-          <span class="explore-img" style="background-image:url('assets/images/gourmet_live_spread_1792227989164.jpg')"></span>
+          <span class="explore-img" style="background-image:url('assets/images/banquet_dining_authentic.jpg')"></span>
           <span class="explore-body">
             <strong>Feast builder</strong>
             <span>Pick dishes and send your menu</span>
@@ -309,7 +589,7 @@
         </a>
 
         <a class="explore-card" href="calendar.html">
-          <span class="explore-img" style="background-image:url('assets/images/luxury_bridal_suite_1792227198649.jpg')"></span>
+          <span class="explore-img" style="background-image:url('assets/images/bridal_suite_authentic.jpg')"></span>
           <span class="explore-body">
             <strong>Muhurtham dates</strong>
             <span>See which dates are open</span>
@@ -317,7 +597,7 @@
         </a>
 
         <a class="explore-card" href="calculator.html">
-          <span class="explore-img" style="background-image:url('assets/images/grand_banquet_dining_1792227102798.jpg')"></span>
+          <span class="explore-img" style="background-image:url('assets/images/banquet_dining_authentic.jpg')"></span>
           <span class="explore-body">
             <strong>Cost quote</strong>
             <span>Estimate your budget by guest count</span>
@@ -325,7 +605,7 @@
         </a>
 
         <a class="explore-card" href="location.html">
-          <span class="explore-img" style="background-image:url('assets/images/outdoor_lawn_evening_1792227047846.jpg')"></span>
+          <span class="explore-img" style="background-image:url('assets/images/grand_entrance_portico_authentic.jpg')"></span>
           <span class="explore-body">
             <strong>Location</strong>
             <span>Rushikonda beach road, with directions</span>
@@ -421,7 +701,7 @@
         <p>Visakhapatnam's premier coastal destination for weddings, receptions and corporate gatherings.</p>
       </div>
       <div class="footer-grid">
-        <div><h4 class="footer-heading">Explore</h4><div class="footer-links"><a href="gallery.html">Photo Gallery</a><a href="venues.html">Venue Spaces</a><a href="decor.html">Wedding Decor</a><a href="floorplan.html">Floor Plans</a><a href="catering.html">Feast Builder</a><a href="calendar.html">Muhurtham Dates</a><a href="calculator.html">Instant Cost Quote</a></div></div>
+        <div><h4 class="footer-heading">Explore</h4><div class="footer-links"><a href="#gallery">Photo Gallery</a><a href="venues.html">Venue Spaces</a><a href="decor.html">Wedding Decor</a><a href="floorplan.html">Floor Plans</a><a href="catering.html">Feast Builder</a><a href="calendar.html">Muhurtham Dates</a><a href="calculator.html">Instant Cost Quote</a></div></div>
         <div><h4 class="footer-heading">Occasions</h4><div class="footer-links">
           <a href="contact.html">Weddings</a><a href="contact.html">Receptions</a><a href="contact.html">Corporate Summits</a><a href="contact.html">Sangeet Celebrations</a><a href="contact.html">Cultural Festivals</a></div></div>
         <div><h4 class="footer-heading">Contact &amp; Location</h4>
