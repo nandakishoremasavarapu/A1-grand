@@ -190,9 +190,31 @@ function initNavbar() {
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
 
-  const onScroll = () => navbar && navbar.classList.toggle('scrolled', window.scrollY > 40);
+  let isScrolled = false;
+  let ticking = false;
+
+  const updateScroll = () => {
+    if (!navbar) return;
+    const sy = window.scrollY || window.pageYOffset;
+    if (!isScrolled && sy > 50) {
+      isScrolled = true;
+      navbar.classList.add('scrolled');
+    } else if (isScrolled && sy < 20) {
+      isScrolled = false;
+      navbar.classList.remove('scrolled');
+    }
+    ticking = false;
+  };
+
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateScroll);
+      ticking = true;
+    }
+  };
+
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  updateScroll();
 
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', () => {
