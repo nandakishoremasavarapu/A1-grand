@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 160" width="100%" height="100%">
+  <defs>
+    <!-- Background plaque gradient matching the authentic signboard -->
+    <linearGradient id="signboardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121a29"/>
+      <stop offset="50%" stop-color="#0a101b"/>
+      <stop offset="100%" stop-color="#05080e"/>
+    </linearGradient>
+
+    <!-- Subtle light sweep highlight -->
+    <linearGradient id="metalSheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="50%" stop-color="rgba(255,255,255,0.25)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+
+    <!-- Drop shadow for 3D embossed lettering -->
+    <filter id="letter3D" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="1" dy="3" stdDeviation="2" flood-color="#000000" flood-opacity="0.85"/>
+      <feDropShadow dx="-0.5" dy="-0.5" stdDeviation="1" flood-color="#ffffff" flood-opacity="0.25"/>
+    </filter>
+
+    <filter id="glowEffect" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Signboard Plaque Outer Frame -->
+  <rect x="6" y="8" width="408" height="144" rx="10" fill="url(#signboardBg)" stroke="#ffffff" stroke-width="1.8" stroke-opacity="0.85"/>
+  <rect x="10" y="12" width="400" height="136" rx="8" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+
+  <!-- Logo Mark & Text -->
+  <g id="logoTextGroup" filter="url(#letter3D)">
+    <!-- "A1" Bold Stylized Symbol -->
+    <text x="42" y="86" 
+          font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-size="64" 
+          font-weight="900" 
+          letter-spacing="-0.03em" 
+          fill="#ffffff">A1</text>
+    
+    <!-- "Grand" Modern Rounded Display -->
+    <text x="146" y="86" 
+          font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-size="52" 
+          font-weight="700" 
+          letter-spacing="-0.01em" 
+          fill="#ffffff">Grand</text>
+
+    <!-- "THE CONVENTION" Tracked Sub-headline -->
+    <text x="44" y="124" 
+          font-family="'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" 
+          font-size="18" 
+          font-weight="800" 
+          letter-spacing="0.32em" 
+          fill="#cbd5e1">THE CONVENTION</text>
+  </g>
+
+  <!-- Subtle Shimmer Sweep Overlay -->
+  <rect x="6" y="8" width="408" height="144" rx="10" fill="url(#metalSheen)" opacity="0.6" pointer-events="none"/>
+</svg>
